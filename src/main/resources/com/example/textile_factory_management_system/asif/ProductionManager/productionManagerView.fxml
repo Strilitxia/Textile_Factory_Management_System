@@ -21,7 +21,7 @@
                     </font>
                 </Label>
                 <!-- Welcome Label uses Bright Yellow/Green accent -->
-                <Label fx:id="welcomeLabel" text="Welcome Message Placeholder" textFill="#F0F347">
+                <Label fx:id="welcomeLabel" text="Welcome Message Placeholder." textFill="#F0F347">
                     <font>
                         <Font size="14.0" />
                     </font>
