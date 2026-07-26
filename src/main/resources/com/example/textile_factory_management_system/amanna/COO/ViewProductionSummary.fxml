@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Text layoutX="35.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCTION SUMMARY">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TableView layoutX="38.0" layoutY="108.0" prefHeight="200.0" prefWidth="523.0">
+        <columns>
+          <TableColumn prefWidth="188.800048828125" text="Production Output ID" />
+          <TableColumn prefWidth="139.199951171875" text="Batch ID" />
+            <TableColumn prefWidth="189.60003662109375" text="Total Produced" />
+        </columns>
+      </TableView>
+      <Text layoutX="35.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View a summary of the production outputs" />
+   </children>
+</AnchorPane>
