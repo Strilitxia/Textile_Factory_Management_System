@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <Text layoutX="250.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alternative Shift" />
+      <ComboBox fx:id="alternativeShiftCB" layoutX="354.0" layoutY="74.0" prefWidth="150.0" />
+      <Button layoutX="325.0" layoutY="123.0" mnemonicParsing="false" onAction="#requestChangeButtonOA" text="Request Change" />
+      <Label layoutX="397.0" layoutY="281.0" prefHeight="51.0" prefWidth="166.0" text="Shift Change Request" />
+   </children>
+</AnchorPane>
