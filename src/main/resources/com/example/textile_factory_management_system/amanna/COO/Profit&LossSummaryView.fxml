@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="513.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
-      <Label layoutX="21.0" layoutY="122.0" text="Total Revenew" />
+      <Label layoutX="21.0" layoutY="122.0" text="Total Revenue" />
       <Text layoutX="45.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFIT AND LOSS SUMMARY">
          <font>
             <Font name="System Bold" size="19.0" />
