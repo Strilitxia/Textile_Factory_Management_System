@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.ViewAttendanceRecord">
    <children>
       <Button fx:id="myAttendanceButtonOA" layoutX="357.0" layoutY="67.0" mnemonicParsing="false" onAction="#myAttendanceButtonOA" text="My Attendance" />
       <TableView fx:id="tableViewTV" layoutX="275.0" layoutY="131.0" prefHeight="200.0" prefWidth="227.0">
