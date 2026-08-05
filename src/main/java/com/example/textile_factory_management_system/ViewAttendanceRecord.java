@@ -1,5 +1,10 @@
 package com.example.textile_factory_management_system;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class ViewAttendanceRecord
 {
     @javafx.fxml.FXML
