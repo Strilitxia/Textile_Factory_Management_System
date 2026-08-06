@@ -45,34 +45,34 @@ public class WorkerViewController {
     }
 
     @javafx.fxml.FXML
-    public void viewDailyProductionTaskQuotaOA(ActionEvent actionEvent) {
+    public void viewDailyProductionTaskQuotaOA(ActionEvent actionEvent) {loadFXMLView("ViewDailyProductiontaskQuota.fxml");
     }
 
     @javafx.fxml.FXML
-    public void submitPersonalLeaveRequestOA(ActionEvent actionEvent) {
+    public void submitPersonalLeaveRequestOA(ActionEvent actionEvent) {loadFXMLView("SubmitPersonalLeaveRequestView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void viewAttendanceRecordOA(ActionEvent actionEvent) {
+    public void viewAttendanceRecordOA(ActionEvent actionEvent) {loadFXMLView("ViewAttendanceRecord.fxml");
     }
 
     @javafx.fxml.FXML
-    public void viewCurrentMonthsSalaryOA(ActionEvent actionEvent) {
+    public void viewCurrentMonthsSalaryOA(ActionEvent actionEvent) {loadFXMLView("ViewCurrentMonthsSalary.fxml");
     }
 
     @javafx.fxml.FXML
-    public void assignedShifttimeAttendancebuttonOA(ActionEvent actionEvent) {
+    public void assignedShifttimeAttendancebuttonOA(ActionEvent actionEvent) {loadFXMLView("AssignedShiftTimeAttendanceView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void sendComplainsToHRbuttonOA(ActionEvent actionEvent) {
+    public void sendComplainsToHRbuttonOA(ActionEvent actionEvent) {loadFXMLView("SendComplainsToHRView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void submitShiftChangeRequestOA(ActionEvent actionEvent) {
+    public void submitShiftChangeRequestOA(ActionEvent actionEvent) {loadFXMLView("SubmitShiftChangeRequestView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void attendanceBeforeClockingOutButtonOA(ActionEvent actionEvent) {
+    public void attendanceBeforeClockingOutButtonOA(ActionEvent actionEvent) {loadFXMLView("ProvideAttendanceView.fxml");
     }
 }
