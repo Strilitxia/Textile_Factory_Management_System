@@ -9,13 +9,13 @@
 
 <!-- Background is near white: #fefefe -->
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="900.0" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #fefefe;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cse213.cse213mangogardenmanagementsystem.Owner.controller.OwnerController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="900.0" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #fefefe;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.COO.Controller.COOViewController">
 
     <!-- TOP: Header/Welcome Area (Primary Dark Green: #1E4E43FF) -->
     <top>
         <VBox alignment="CENTER_LEFT" style="-fx-background-color: #1E4E43FF; -fx-padding: 20px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 5);" BorderPane.alignment="CENTER">
             <children>
-                <Label text=" TEXTILE FACTORY -COO" textFill="#fefefe">
+                <Label fx:id="textileFactoryCOOlabel" text=" TEXTILE FACTORY -COO" textFill="#fefefe">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>

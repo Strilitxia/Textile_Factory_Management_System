@@ -6,22 +6,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="368.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="368.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.COO.Controller.ViewInventorySummaryController">
    <children>
-      <Text layoutX="45.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVENTORY SUMMARY">
+      <Text fx:id="inventorysummaryLabel" layoutX="45.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVENTORY SUMMARY">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Text>
-      <TableView layoutX="48.0" layoutY="115.0" prefHeight="200.0" prefWidth="523.0">
+      <TableView fx:id="inventorysummaryTV" layoutX="48.0" layoutY="115.0" prefHeight="200.0" prefWidth="523.0">
          <columns>
-            <TableColumn prefWidth="110.39996719360352" text="Material ID" />
-            <TableColumn prefWidth="132.7999725341797" text="Material Name" />
-            <TableColumn prefWidth="107.20001220703125" text="Stock Quantity" />
-            <TableColumn prefWidth="84.79998779296875" text="Unit Price" />
-            <TableColumn prefWidth="85.59991455078125" text="Validity" />
+            <TableColumn fx:id="materialIdTC" prefWidth="110.39996719360352" text="Material ID" />
+            <TableColumn fx:id="materialNameTC" prefWidth="132.7999725341797" text="Material Name" />
+            <TableColumn fx:id="stockQuantityTc" prefWidth="107.20001220703125" text="Stock Quantity" />
+            <TableColumn fx:id="unitPriceTC" prefWidth="84.79998779296875" text="Unit Price" />
+            <TableColumn fx:id="validityTC" prefWidth="85.59991455078125" text="Validity" />
          </columns>
       </TableView>
-      <Text layoutX="45.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View a summary of the raw materials" />
    </children>
 </AnchorPane>
