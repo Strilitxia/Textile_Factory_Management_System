@@ -1,5 +1,9 @@
 package com.example.textile_factory_management_system.amanna.Worker.Controller;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+import javafx.scene.text.Text;
+
 public class SubmitPersonalLeaveRequestController
 {
     @javafx.fxml.FXML
