@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="513.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.COO.Controller.ProfitLossSummaryViewController">
+   <children>
+      <Label layoutX="21.0" layoutY="122.0" text="Total Revenue" />
+      <Text fx:id="profitandlossSummaryLabel" layoutX="45.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFIT AND LOSS SUMMARY">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <TextField fx:id="totalRevenueTF" layoutX="108.0" layoutY="118.0" />
+      <Text layoutX="300.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Operational Costs" />
+      <TextField fx:id="titalOperationalcostsTF" layoutX="424.0" layoutY="118.0" />
+      <Text layoutX="172.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculated Value" />
+      <TextField fx:id="calculatedvalueTF" layoutX="274.0" layoutY="188.0" />
+      <TableView fx:id="profitandLossTV" layoutX="173.0" layoutY="257.0" prefHeight="200.0" prefWidth="306.0">
+        <columns>
+          <TableColumn fx:id="profitStatementTC" prefWidth="150.4000244140625" text="Profit Statement" />
+          <TableColumn fx:id="losStatementTC" prefWidth="150.39996337890625" text="Loss Statement" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.Worker.Controller.ViewAttendanceRecord">
+   <children>
+      <Button fx:id="myAttendanceButtonOA" layoutX="357.0" layoutY="67.0" mnemonicParsing="false" onAction="#myAttendanceButtonOA" text="My Attendance" />
+      <TableView fx:id="tableViewTV" layoutX="275.0" layoutY="131.0" prefHeight="200.0" prefWidth="227.0">
+         <columns>
+            <TableColumn fx:id="datesTC" prefWidth="75.0" text="Dates" />
+            <TableColumn fx:id="clockinTC" prefWidth="75.0" text="ClockIn" />
+            <TableColumn fx:id="clockOutTC" prefWidth="75.0" text="ClockOut" />
+            <TableColumn prefWidth="75.0" text="C1" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
