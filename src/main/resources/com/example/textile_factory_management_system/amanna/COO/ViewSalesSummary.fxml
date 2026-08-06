@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="442.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.ViewSalesSummaryController">
+<AnchorPane prefHeight="442.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.COO.Controller.ViewSalesSummaryController">
     <children>
         <Text fx:id="salesSummaryLabel" layoutX="35.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALES SUMMARY">
             <font>

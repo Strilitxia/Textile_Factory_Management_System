@@ -1,11 +1,6 @@
-package com.example.textile_factory_management_system;
+package com.example.textile_factory_management_system.amanna.Worker.Controller;
 
-import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-
-public class SubmitPersonalLeaveRequestViewController
+public class SubmitPersonalLeaveRequestController
 {
     @javafx.fxml.FXML
     private Text submitPersonalLeaveRequestLabel;

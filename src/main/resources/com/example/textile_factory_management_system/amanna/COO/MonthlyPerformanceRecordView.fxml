@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.MonthlyPerformanceRecordViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.COO.Controller.MonthlyPerformanceRecordViewController">
    <children>
       <Text fx:id="monthlyPerformanceReportLabel" layoutX="40.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTHLY PERFORMANCE REPORT">
          <font>

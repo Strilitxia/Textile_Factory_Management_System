@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="513.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.ProfitLossSummaryViewController">
+<AnchorPane prefHeight="513.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.COO.Controller.ProfitLossSummaryViewController">
    <children>
       <Label layoutX="21.0" layoutY="122.0" text="Total Revenue" />
       <Text fx:id="profitandlossSummaryLabel" layoutX="45.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFIT AND LOSS SUMMARY">
