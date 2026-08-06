@@ -6,27 +6,32 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.text.Text;
 
+import java.time.LocalDate;
+
 public class ApproveLargeProductionOrderController
 {
     @javafx.fxml.FXML
-    private TableColumn scheduleDateTC;
+    private TableColumn<LargeOrder, LocalDate> scheduleDateTC;
     @javafx.fxml.FXML
-    private ComboBox selectactionCB;
+    private ComboBox<String> selectactionCB;
     @javafx.fxml.FXML
-    private TableColumn productTypeTC;
+    private TableColumn<LargeOrder, String> productTypeTC;
     @javafx.fxml.FXML
     private TableView productionOrderTV;
     @javafx.fxml.FXML
     private Text largeProductionOrderLabel;
     @javafx.fxml.FXML
-    private TableColumn oefderIdTC;
+    private TableColumn<LargeOrder,Integer> orderIdTC;
     @javafx.fxml.FXML
-    private TableColumn customerIdTc;
+    private TableColumn<LargeOrder,Integer> customerIdTc;
     @javafx.fxml.FXML
-    private ComboBox selectOrderCB;
+    private ComboBox<String> selectOrderCB;
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectactionCB.getItems().addAll("approve","Reject");
+        selectOrderCB.getItems().addAll();
+
     }
 
     @javafx.fxml.FXML
