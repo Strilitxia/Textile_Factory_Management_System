@@ -12,7 +12,7 @@ public class SetProductionTargetViewController
     @javafx.fxml.FXML
     private TableColumn<ProductionTarget,Integer> targetIdTc;
     @javafx.fxml.FXML
-    private TableView setProductionTV;
+    private TableView <productionTarget>setProductionTV;
     @javafx.fxml.FXML
     private TableColumn<ProductionTarget,String> productTypeTC;
     @javafx.fxml.FXML

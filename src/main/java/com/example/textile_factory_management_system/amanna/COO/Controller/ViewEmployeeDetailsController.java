@@ -8,7 +8,7 @@ import javafx.scene.text.Text;;
 public class ViewEmployeeDetailsController
 {
     @javafx.fxml.FXML
-    private TableView viewEmployeeDetailsTV;
+    private TableView<Employee> viewEmployeeDetailsTV;
     @javafx.fxml.FXML
     private TableColumn<Employee,String> roleTC;
     @javafx.fxml.FXML
