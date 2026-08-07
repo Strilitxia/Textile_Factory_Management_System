@@ -29,7 +29,7 @@ public class ApproveLargeProductionOrderController
 
     @javafx.fxml.FXML
     public void initialize() {
-        selectactionCB.getItems().addAll("approve","Reject");
+        selectactionCB.getItems().addAll("Approve","Reject");
         selectOrderCB.getItems().addAll();
 
     }
