@@ -28,9 +28,9 @@ public class SetProductionTargetViewController
 
     @javafx.fxml.FXML
     public void initialize() {
-        targetIdTc.setCellValueFactory(new PropertyValueFactory<ProductionTarget,Integer>(""));
-        productTypeTC.setCellValueFactory(new PropertyValueFactory<ProductionTarget,String>(""));
-        targetamountTC.setCellValueFactory(new PropertyValueFactory<ProductionTarget,Integer>(""));
+        targetIdTc.setCellValueFactory(new PropertyValueFactory<ProductionTarget,Integer>("targetId"));
+        productTypeTC.setCellValueFactory(new PropertyValueFactory<ProductionTarget,String>("productType"));
+        targetamountTC.setCellValueFactory(new PropertyValueFactory<ProductionTarget,Integer>("targetamount"));
 
 
 

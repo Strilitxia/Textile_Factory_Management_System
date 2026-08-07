@@ -4,8 +4,18 @@ import java.time.LocalDate;
 
 public class Attendance {
     private LocalDate timestamp;
-    private final int employeeID;
-    private String attendanceType;
+    private  int employeeID;
+
+    public Attendance(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    private String attendanceType,inTime,outTime;
+
+    public Attendance(String inTime, String outTime) {
+        this.inTime = inTime;
+        this.outTime = outTime;
+    }
 
     public Attendance(LocalDate timestamp, int employeeID, String attendanceType) {
         this.timestamp = timestamp;
@@ -13,13 +23,7 @@ public class Attendance {
         this.attendanceType = attendanceType;
     }
 
-    public LocalDate getTimestamp() {
-        return timestamp;
-    }
 
-    public void setTimestamp(LocalDate timestamp) {
-        this.timestamp = timestamp;
-    }
 
     public int getEmployeeID() {
         return employeeID;
