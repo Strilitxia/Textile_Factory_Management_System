@@ -20,5 +20,7 @@ public class ViewProductionSummaryController
 
     @javafx.fxml.FXML
     public void initialize() {
-         productionOutputIdTc.setCellValueFactory(new PropertyValueFactory<ProductionSummary,Integer>());
+         productionOutputIdTc.setCellValueFactory(new PropertyValueFactory<ProductionSummary,Integer>(""));
+         batchIdTC.setCellValueFactory(new PropertyValueFactory<ProductionSummary,Integer>("" ));
+         totalProducedTC.setCellValueFactory(new PropertyValueFactory<Productionsummary,Integer>(""));
     }}
