@@ -1,6 +1,6 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class Salary extends User{
+public class Salary {
     private final int employeeID;
     private float baseRate;
     private float bonusAmount;
