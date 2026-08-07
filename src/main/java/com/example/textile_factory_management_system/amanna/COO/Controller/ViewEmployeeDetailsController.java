@@ -1,5 +1,6 @@
 package com.example.textile_factory_management_system.amanna.COO.Controller;
 
+import com.example.textile_factory_management_system.NonUser.Employee;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;;
