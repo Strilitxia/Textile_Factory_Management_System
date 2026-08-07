@@ -17,17 +17,17 @@
          </font>
       </Label>
       <Label layoutX="57.0" layoutY="104.0" text="Select Worker:" />
-      <ComboBox layoutX="153.0" layoutY="100.0" prefWidth="150.0" />
+      <ComboBox fx:id="selectWorkerComboBox" layoutX="153.0" layoutY="100.0" prefWidth="150.0" />
       <Label layoutX="57.0" layoutY="150.0" text="Task Description:" />
-      <TextField layoutX="57.0" layoutY="167.0" prefHeight="87.0" prefWidth="297.0" />
-      <Button layoutX="437.0" layoutY="108.0" mnemonicParsing="false" text="Assign Task" />
-      <TableView layoutX="33.0" layoutY="271.0" prefHeight="190.0" prefWidth="632.0">
+      <TextField fx:id="taskDescriptionTF" layoutX="57.0" layoutY="167.0" prefHeight="87.0" prefWidth="297.0" />
+      <Button layoutX="437.0" layoutY="108.0" mnemonicParsing="false" onAction="#assignTaskButtonOA" text="Assign Task" />
+      <TableView fx:id="workerTaskTV" layoutX="33.0" layoutY="271.0" prefHeight="190.0" prefWidth="632.0">
         <columns>
-          <TableColumn prefWidth="196.0" text="Task ID" />
-          <TableColumn prefWidth="177.0" text="Worker ID" />
-            <TableColumn prefWidth="257.0" text="Task Description" />
+          <TableColumn fx:id="taskIdTC" prefWidth="196.0" text="Task ID" />
+          <TableColumn fx:id="workerIdTC" prefWidth="177.0" text="Worker ID" />
+            <TableColumn fx:id="taskDescriptionTC" prefWidth="257.0" text="Task Description" />
         </columns>
       </TableView>
-      <Button layoutX="412.0" layoutY="198.0" mnemonicParsing="false" text="Load Assigned Tasks" />
+      <Button layoutX="412.0" layoutY="198.0" mnemonicParsing="false" onAction="#loadAssignedTaskOA" text="Load Assigned Tasks" />
    </children>
 </AnchorPane>

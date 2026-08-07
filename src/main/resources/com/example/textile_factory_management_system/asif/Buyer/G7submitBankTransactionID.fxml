@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
       <Label layoutX="57.0" layoutY="44.0" text="Submit Bank Transaction ID:">
@@ -18,9 +17,9 @@
       <Label layoutX="57.0" layoutY="106.0" text="Select Order:" />
       <Label layoutX="59.0" layoutY="150.0" text="Select Bank:" />
       <Label layoutX="57.0" layoutY="192.0" text="Enter Transaction ID:" />
-      <Button layoutX="57.0" layoutY="230.0" mnemonicParsing="false" text="Submit ID" />
-      <ComboBox layoutX="150.0" layoutY="102.0" prefWidth="150.0" />
-      <ComboBox layoutX="150.0" layoutY="146.0" prefWidth="150.0" />
-      <TextField layoutX="179.0" layoutY="188.0" />
+      <Button layoutX="57.0" layoutY="230.0" mnemonicParsing="false" onAction="#submitIdButtonOA" text="Submit ID" />
+      <ComboBox fx:id="orderComboBox" layoutX="150.0" layoutY="102.0" prefWidth="150.0" />
+      <ComboBox fx:id="selectBankComboBox" layoutX="150.0" layoutY="146.0" prefWidth="150.0" />
+      <TextField fx:id="transactionIdTF" layoutX="179.0" layoutY="188.0" />
    </children>
 </AnchorPane>

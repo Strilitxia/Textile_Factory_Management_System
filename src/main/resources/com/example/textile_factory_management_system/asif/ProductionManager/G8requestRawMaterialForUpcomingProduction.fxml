@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="444.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
       <Label layoutX="45.0" layoutY="47.0" text="Request Raw Material For Upcoming Production:">
@@ -17,8 +16,8 @@
       </Label>
       <Label layoutX="45.0" layoutY="109.0" text="Material Type" />
       <Label layoutX="45.0" layoutY="152.0" text="Amount:" />
-      <ComboBox layoutX="137.0" layoutY="105.0" prefWidth="150.0" />
-      <TextField layoutX="137.0" layoutY="148.0" />
-      <Button layoutX="45.0" layoutY="196.0" mnemonicParsing="false" text="Create Request" />
+      <ComboBox fx:id="selectMaterialTypeComboBox" layoutX="137.0" layoutY="105.0" prefWidth="150.0" />
+      <TextField fx:id="materialAmountTF" layoutX="137.0" layoutY="148.0" />
+      <Button layoutX="45.0" layoutY="196.0" mnemonicParsing="false" onAction="#materialRequestButtonOA" text="Create Request" />
    </children>
 </AnchorPane>
