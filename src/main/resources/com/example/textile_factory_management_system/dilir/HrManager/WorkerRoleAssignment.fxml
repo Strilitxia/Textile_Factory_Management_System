@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.WorkerRoleAssignmentController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.WorkerRoleAssignmentController">
+   <children>
+      <Label layoutX="41.0" layoutY="27.0" text="Worker:" />
+      <ComboBox layoutX="90.0" layoutY="23.0" prefWidth="150.0" />
+      <Label layoutX="316.0" layoutY="27.0" text="Designation: " />
+      <ComboBox layoutX="394.0" layoutY="23.0" prefWidth="150.0" />
+      <Button layoutX="259.0" layoutY="61.0" mnemonicParsing="false" text="Update Role" />
+      <Label alignment="CENTER" disable="true" layoutX="178.0" layoutY="115.0" prefHeight="78.0" prefWidth="252.0" style="-fx-background-color: #f5d3bc;" text="Status" />
+   </children>
 </AnchorPane>

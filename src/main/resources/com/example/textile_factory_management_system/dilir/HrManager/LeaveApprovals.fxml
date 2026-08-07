@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
@@ -19,8 +20,16 @@
       </TableView>
       <Label layoutX="14.0" layoutY="14.0" text="Leave Request Table:" />
       <Label alignment="CENTER" disable="true" layoutX="154.0" layoutY="263.0" prefHeight="30.0" prefWidth="314.0" style="-fx-background-color: #f5d3bc;" text="Selected Info" />
-      <Button layoutX="54.0" layoutY="313.0" mnemonicParsing="false" text="Approve" />
-      <Button layoutX="487.0" layoutY="313.0" mnemonicParsing="false" text="Reject" />
+      <Button layoutX="54.0" layoutY="313.0" mnemonicParsing="false" text="Approve">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="487.0" layoutY="313.0" mnemonicParsing="false" text="Reject">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
       <Label alignment="CENTER" disable="true" layoutX="226.0" layoutY="339.0" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: #f5d3bc;" text="Status" />
    </children>
 </AnchorPane>
