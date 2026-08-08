@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -20,10 +21,11 @@
       <Text layoutX="199.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendance Record" />
       <TableView fx:id="attendanceRecordTV" layoutX="98.0" layoutY="177.0" prefHeight="200.0" prefWidth="271.0">
         <columns>
-          <TableColumn fx:id="dateTC" prefWidth="75.0" text="Date" />
-          <TableColumn fx:id="inTimeTC" prefWidth="75.0" text="In time" />
-            <TableColumn fx:id="outTimeTC" prefWidth="75.0" text="Out time" />
+          <TableColumn fx:id="dateTC" prefWidth="88.800048828125" text="Date" />
+          <TableColumn fx:id="inTimeTC" prefWidth="87.199951171875" text="In time" />
+            <TableColumn fx:id="outTimeTC" prefWidth="94.4000244140625" text="Out time" />
         </columns>
       </TableView>
+      <Button layoutX="343.0" layoutY="96.0" mnemonicParsing="false" onAction="#loadButtonOA" text="Load Attendance" />
    </children>
 </AnchorPane>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -13,13 +13,13 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="63.0" layoutY="118.0" text="Select Completed Order:" />
-      <ComboBox fx:id="completedOrderListComboBox" layoutX="216.0" layoutY="114.0" prefWidth="150.0" />
-      <Label fx:id="downloadStatusLabel" layoutX="196.0" layoutY="175.0" text="Download Available" textFill="#41b53f">
+      <Label layoutX="63.0" layoutY="118.0" text="Completed Order ID:" />
+      <Label fx:id="downloadStatusLabel" layoutX="196.0" layoutY="175.0" text="Invoice Available" textFill="#41b53f">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Button fx:id="downloadButtonOA" layoutX="255.0" layoutY="246.0" mnemonicParsing="false" text="Download" />
+      <Button layoutX="405.0" layoutY="114.0" mnemonicParsing="false" onAction="#loadOrderButtonOA" text="Load Order" />
+      <TextField fx:id="completedOrderIdTF" layoutX="211.0" layoutY="114.0" />
    </children>
 </AnchorPane>

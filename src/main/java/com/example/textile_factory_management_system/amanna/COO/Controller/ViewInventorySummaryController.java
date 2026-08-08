@@ -26,11 +26,11 @@ public class ViewInventorySummaryController
 
     @javafx.fxml.FXML
     public void initialize() {
-        materialIdTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,Integer>(""));
-        validityTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,LocalDate>(""));
-        materialNameTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,String>(""));
-        unitPriceTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,Integer>(""));
-        stockQuantityTc.setCellValueFactory((new PropertyValueFactory<RawMaterial,Integer>("")));
+        materialIdTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,Integer>("materialId"));
+        validityTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,LocalDate>("validity"));
+        materialNameTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,String>("materialName"));
+        unitPriceTC.setCellValueFactory(new PropertyValueFactory<RawMaterial,Integer>("unitPrice"));
+        stockQuantityTc.setCellValueFactory((new PropertyValueFactory<RawMaterial,Integer>("stockQuantity")));
 
 
     }}

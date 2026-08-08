@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class BankReceipt {
+import java.io.Serializable;
+
+public class BankReceipt implements Serializable {
     private int orderId;
     private String bankName,transactionId;
 

@@ -1,59 +1,49 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class Quotation {
-    private int quotationId,rfqId;
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class Quotation implements Serializable {
+    private int quotationId, rfqId;
     private float proposedUnitPrice;
-    private boolean isRejected;
+    private String productType;
+    private String status;
+    private LocalDate submittedOn;
+
+    public Quotation(int quotationId, int rfqId, float proposedUnitPrice, String productType) {
+        this.quotationId = quotationId;
+        this.rfqId = rfqId;
+        this.proposedUnitPrice = proposedUnitPrice;
+        this.productType = productType;
+        this.status = "Pending";
+        this.submittedOn = LocalDate.now();
+    }
 
     public int getQuotationId() {
         return quotationId;
-    }
-
-    public void setQuotationId(int quotationId) {
-        this.quotationId = quotationId;
     }
 
     public int getRfqId() {
         return rfqId;
     }
 
-    public void setRfqId(int rfqId) {
-        this.rfqId = rfqId;
-    }
-
     public float getProposedUnitPrice() {
         return proposedUnitPrice;
     }
 
-    public void setProposedUnitPrice(float proposedUnitPrice) {
-        this.proposedUnitPrice = proposedUnitPrice;
+    public String getProductType() {
+        return productType;
     }
 
-    public boolean isRejected() {
-        return isRejected;
+    public String getStatus() {
+        return status;
     }
 
-    public void setRejected(boolean rejected) {
-        isRejected = rejected;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public Quotation(int quotationId, int rfqId, float proposedUnitPrice, boolean isRejected) {
-        this.quotationId = quotationId;
-        this.rfqId = rfqId;
-        this.proposedUnitPrice = proposedUnitPrice;
-        this.isRejected = isRejected;
-    }
-
-    @Override
-    public String toString() {
-        return "Quotation{" +
-                "quotationId=" + quotationId +
-                ", rfqId=" + rfqId +
-                ", proposedUnitPrice=" + proposedUnitPrice +
-                ", isRejected=" + isRejected +
-                '}';
+    public LocalDate getSubmittedOn() {
+        return submittedOn;
     }
 }
-
-
-

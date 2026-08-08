@@ -16,10 +16,12 @@
       </Label>
       <Label layoutX="64.0" layoutY="122.0" text="Select Product:" />
       <Label layoutX="64.0" layoutY="157.0" text="Select Rating:" />
-      <Label layoutX="64.0" layoutY="193.0" text="Comment:" />
-      <Button layoutX="266.0" layoutY="334.0" mnemonicParsing="false" onAction="#submitReviewButtonOA" text="Submit Review" />
-      <TextField fx:id="commentTF" layoutX="139.0" layoutY="189.0" prefHeight="119.0" prefWidth="455.0" />
+      <Label layoutX="64.0" layoutY="237.0" text="Comment:" />
+      <Button layoutX="266.0" layoutY="362.0" mnemonicParsing="false" onAction="#submitReviewButtonOA" text="Submit Review" />
+      <TextField fx:id="commentTF" layoutX="139.0" layoutY="233.0" prefHeight="119.0" prefWidth="455.0" />
       <ComboBox fx:id="selectProductComboBox" layoutX="165.0" layoutY="118.0" prefWidth="150.0" />
       <ComboBox fx:id="selectRatingComboBox" layoutX="165.0" layoutY="153.0" prefWidth="150.0" />
+      <Label layoutX="54.0" layoutY="189.0" text="Enter Customer ID:" />
+      <TextField fx:id="customerIdTF" layoutX="165.0" layoutY="185.0" />
    </children>
 </AnchorPane>

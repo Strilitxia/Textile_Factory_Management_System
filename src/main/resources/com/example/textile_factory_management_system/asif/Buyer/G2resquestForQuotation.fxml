@@ -15,9 +15,11 @@
          </font>
       </Label>
       <Label layoutX="68.0" layoutY="111.0" text="Select Product Type:" />
-      <Label layoutX="68.0" layoutY="158.0" text="Enter Bulk Quantity:" />
-      <Button layoutX="68.0" layoutY="208.0" mnemonicParsing="false" onAction="#sendQuotationRequestBuutonOA" text="Send Quotation Request" />
+      <Label layoutX="68.0" layoutY="187.0" text="Enter Bulk Quantity:" />
+      <Button layoutX="68.0" layoutY="237.0" mnemonicParsing="false" onAction="#sendQuotationRequestBuutonOA" text="Send Quotation Request" />
       <ComboBox fx:id="productTypeComboBox" layoutX="200.0" layoutY="107.0" prefWidth="150.0" />
-      <TextField fx:id="bulkQuantityTF" layoutX="195.0" layoutY="154.0" />
+      <TextField fx:id="bulkQuantityTF" layoutX="195.0" layoutY="183.0" />
+      <Label layoutX="68.0" layoutY="148.0" text="Enter Customer ID:" />
+      <TextField fx:id="customerIDTF" layoutX="195.0" layoutY="144.0" />
    </children>
 </AnchorPane>

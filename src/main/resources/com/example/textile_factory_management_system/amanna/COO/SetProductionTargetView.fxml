@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -10,26 +10,22 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.COO.Controller.SetProductionTargetViewController">
    <children>
-      <AnchorPane layoutY="-6.0" prefHeight="471.0" prefWidth="634.0">
+      <AnchorPane prefHeight="465.0" prefWidth="634.0">
          <children>
-            <Text fx:id="setProductionTargetLabel" layoutX="48.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Production Target">
+            <Text fx:id="setProductionTargetLabel" layoutX="48.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SET PRODUCTION TARGETS">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Text>
-            <TableView fx:id="setProductionTV" layoutX="107.0" layoutY="178.0" prefHeight="200.0" prefWidth="342.0">
-               <columns>
-                  <TableColumn fx:id="targetIdTc" prefWidth="110.39996719360352" text="TargetID" />
-                  <TableColumn fx:id="productTypeTC" prefWidth="132.7999725341797" text="Product Type" />
-                  <TableColumn fx:id="targetamountTC" prefWidth="107.20001220703125" text="Target Amount" />
-               </columns>
-            </TableView>
             <Text layoutX="45.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " />
-            <Text layoutX="90.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deadline" />
-            <DatePicker fx:id="deadlineDp" layoutX="146.0" layoutY="83.0" />
-            <Text layoutX="355.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Numerical Amount" />
-            <TextField fx:id="numericalAmountTF" layoutX="486.0" layoutY="76.0" />
-            <Text fx:id="succesLabel" layoutX="486.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Success to the target" />
+            <Text fx:id="succesLabel" layoutX="195.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="274.3999938964844" />
+            <TextField fx:id="productTypeTF" layoutX="297.0" layoutY="104.0" prefHeight="26.0" prefWidth="175.0" />
+            <Label layoutX="202.0" layoutY="108.0" text="Product Type" />
+            <TextField fx:id="targetAmountTF" layoutX="297.0" layoutY="140.0" prefHeight="26.0" prefWidth="175.0" />
+            <Label layoutX="191.0" layoutY="144.0" text="Target Amount" />
+            <Label layoutX="220.0" layoutY="182.0" text="Deadline" />
+            <DatePicker fx:id="deadlineDP" layoutX="297.0" layoutY="178.0" />
+            <Button layoutX="258.0" layoutY="233.0" mnemonicParsing="false" onAction="#createButtonOA" text="Create Production Target" />
          </children>
       </AnchorPane>
    </children>
