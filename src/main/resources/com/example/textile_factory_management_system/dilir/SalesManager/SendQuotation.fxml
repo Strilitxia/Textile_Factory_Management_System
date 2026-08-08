@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.textile_factory_management_system.dilir.SalesManager.Controller.SendQuotationController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.SalesManager.Controller.SendQuotationController">
+   <children>
+      <TableView fx:id="rfqTableView" layoutY="27.0" prefHeight="200.0" prefWidth="599.0">
+        <columns>
+          <TableColumn prefWidth="220.0" text="Customer" />
+          <TableColumn prefWidth="203.20001220703125" text="Product" />
+            <TableColumn prefWidth="175.199951171875" text="Quantity" />
+        </columns>
+      </TableView>
+      <Label layoutX="29.0" layoutY="254.0" text="Proposed Unit Price:" />
+      <TextField fx:id="priceTF" layoutX="143.0" layoutY="250.0" />
+      <Button layoutX="420.0" layoutY="250.0" mnemonicParsing="false" onAction="#sendQuotationButtonOA" text="Send Quotation">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label fx:id="resultLabel" alignment="CENTER" disable="true" layoutX="229.0" layoutY="296.0" prefHeight="46.0" prefWidth="188.0" style="-fx-background-color: #f5d3bc;" text="Show" />
+   </children>
 </AnchorPane>
