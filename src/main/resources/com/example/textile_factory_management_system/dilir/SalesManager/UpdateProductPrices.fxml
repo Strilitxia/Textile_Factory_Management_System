@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.SalesManager.Controller.UpdateProductPricesController">
+   <children>
+      <Label layoutX="34.0" layoutY="32.0" text="Select Product:" />
+      <Label layoutX="332.0" layoutY="32.0" text="New Price:" />
+      <ComboBox fx:id="productComboBox" layoutX="122.0" layoutY="28.0" prefWidth="150.0" />
+      <TextField fx:id="newPriceTF" layoutX="405.0" layoutY="28.0" />
+      <Button layoutX="274.0" layoutY="83.0" mnemonicParsing="false" onAction="#updatePriceButtonOA" text="Update Price">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label fx:id="resultLabel" alignment="CENTER" disable="true" layoutX="214.0" layoutY="136.0" prefHeight="61.0" prefWidth="179.0" style="-fx-background-color: #f5d3bc;" text="Show" />
+   </children>
 </AnchorPane>

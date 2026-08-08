@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.SalesManager.Controller.CreateOrderController">
+   <children>
+      <Label layoutX="41.0" layoutY="102.0" text="Product Type:" />
+      <ComboBox fx:id="productTypeComboBox" layoutX="126.0" layoutY="98.0" prefWidth="150.0" />
+      <Label layoutX="41.0" layoutY="31.0" text="Enter Customer ID:" />
+      <TextField fx:id="customerIdTF" layoutX="150.0" layoutY="27.0" />
+      <Label fx:id="updateLabel" alignment="CENTER" disable="true" layoutX="150.0" layoutY="231.0" prefHeight="64.0" prefWidth="326.0" style="-fx-background-color: #f5d3bc;" text="Show " />
+      <Button layoutX="277.0" layoutY="174.0" mnemonicParsing="false" onAction="#addOrderButtonOA" text="Add Order">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ComboBox fx:id="quantityComboBox1" layoutX="420.0" layoutY="27.0" prefWidth="150.0" />
+      <Label layoutX="334.0" layoutY="31.0" text="Quantity:" />
+      <Label layoutX="313.0" layoutY="102.0" text="Schedule Date:" />
+      <DatePicker fx:id="scheduleDateDP" layoutX="397.0" layoutY="98.0" />
+   </children>
+</AnchorPane>

@@ -9,7 +9,7 @@
 
 <!-- Background is near white: #fefefe -->
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="900.0" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #fefefe;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cse213.cse213mangogardenmanagementsystem.Owner.controller.OwnerController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="900.0" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #fefefe;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.SalesManager.Controller.SalesManagerController">
 
     <!-- TOP: Header/Welcome Area (Primary Dark Green: #1E4E43FF) -->
     <top>
@@ -43,7 +43,7 @@
                 <Button maxWidth="Infinity" onAction="#approvePaymentAndUpdateButton" style="-fx-background-color: #EBB591; -fx-text-fill: #4A2106; -fx-font-weight: bold; -fx-padding: 10px 15px; -fx-background-radius: 8px; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3); -fx-pref-height: 45px;" text="Approve Payment &amp; Update" />
                 <Button maxWidth="Infinity" onAction="#createBuyerCatalogButton" style="-fx-background-color: #EBB591; -fx-text-fill: #4A2106; -fx-font-weight: bold; -fx-padding: 10px 15px; -fx-background-radius: 8px; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3); -fx-pref-height: 45px;" text="Create Buyer Catalog" />
                 <Button maxWidth="Infinity" onAction="#updateProductPricesButton" style="-fx-background-color: #EBB591; -fx-text-fill: #4A2106; -fx-font-weight: bold; -fx-padding: 10px 15px; -fx-background-radius: 8px; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3); -fx-pref-height: 45px;" text="Update Product Prices" />
-                <Button maxWidth="Infinity" onAction="#productSalesAndReviewsButton" style="-fx-background-color: #EBB591; -fx-text-fill: #4A2106; -fx-font-weight: bold; -fx-padding: 10px 15px; -fx-background-radius: 8px; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3); -fx-pref-height: 45px;" text="Product Sales &amp; Reviews" />
+                <Button maxWidth="Infinity" onAction="#createOrderButton" style="-fx-background-color: #EBB591; -fx-text-fill: #4A2106; -fx-font-weight: bold; -fx-padding: 10px 15px; -fx-background-radius: 8px; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3); -fx-pref-height: 45px;" text="Create Order" />
                 <Button maxWidth="Infinity" onAction="#createInvoiceAndDeliverySlipButton" style="-fx-background-color: #EBB591; -fx-text-fill: #4A2106; -fx-font-weight: bold; -fx-padding: 10px 15px; -fx-background-radius: 8px; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 3); -fx-pref-height: 45px;" text="Create Invoice &amp; Delivery Slip" />
                 <Label style="-fx-opacity: 0.7; -fx-font-size: 10px; -fx-text-fill: #fefefe;" text="Ver 1.0" />
             </children>

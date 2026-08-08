@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Quotation implements Serializable {
-    private int quotationId,rfqId;
+    private int quotationId, rfqId;
     private float proposedUnitPrice;
     private String productType;
     private String status;
