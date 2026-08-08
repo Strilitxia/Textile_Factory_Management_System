@@ -13,4 +13,8 @@ module com.example.textile_factory_management_system {
     exports com.example.textile_factory_management_system.asif.Buyer.Controller;
     opens com.example.textile_factory_management_system.asif.ProductionManager.Controller to javafx.fxml;
     exports com.example.textile_factory_management_system.asif.ProductionManager.Controller;
+    opens com.example.textile_factory_management_system.dilir.HrManager.Controller to javafx.fxml;
+    exports com.example.textile_factory_management_system.dilir.HrManager.Controller;
+    opens com.example.textile_factory_management_system.dilir.SalesManager.Controller to javafx.fxml;
+    exports com.example.textile_factory_management_system.dilir.SalesManager.Controller;
 }
