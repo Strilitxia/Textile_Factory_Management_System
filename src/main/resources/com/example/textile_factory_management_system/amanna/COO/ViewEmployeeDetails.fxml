@@ -24,7 +24,7 @@
             <TableView fx:id="viewEmployeeDetailsTV" layoutX="14.0" layoutY="200.0" prefHeight="202.0" prefWidth="533.0">
                <columns>
                   <TableColumn fx:id="roleTC" prefWidth="81.59997940063477" text="Role" />
-                  <TableColumn fx:id="depertmentTC" prefWidth="124.80000305175781" text="Department" />
+                  <TableColumn fx:id="departmentTC" prefWidth="124.80000305175781" text="Department" />
                   <TableColumn fx:id="salaryTC" prefWidth="108.79998779296875" text="Salary" />
                   <TableColumn fx:id="performanceScoreTc" prefWidth="119.2000732421875" text="Performance Score" />
                   <TableColumn fx:id="remarksTC" prefWidth="132.0" text="Remarks" />

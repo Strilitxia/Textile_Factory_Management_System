@@ -8,9 +8,9 @@ public class ProductionOutput implements Serializable {
     public ProductionOutput(int outputId, int batchId, int totalProduced, int defectCount, int usableCount) {
         this.outputId = outputId;
         this.batchId = batchId;
-        this.totalProduced = 0;
-        this.defectCount = 0;
-        this.usableCount = 0;
+        this.totalProduced = totalProduced;
+        this.defectCount = defectCount;
+        this.usableCount = usableCount;
     }
 
     public int getOutputId() {

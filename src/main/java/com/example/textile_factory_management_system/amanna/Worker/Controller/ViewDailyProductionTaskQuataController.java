@@ -25,7 +25,7 @@ public class ViewDailyProductionTaskQuataController
     public void initialize() {
         assignedToTC.setCellValueFactory(new PropertyValueFactory<>("assignedTo"));
         descriptionTC.setCellValueFactory(new PropertyValueFactory<>("description"));
-        taskViewTC.setCellValueFactory(new PropertyValueFactory<>("taskView"));
+        taskViewTC.setCellValueFactory(new PropertyValueFactory<>("taskId"));
     }
 
     @javafx.fxml.FXML

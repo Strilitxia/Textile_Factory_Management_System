@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class Payroll {
+import java.io.Serializable;
+
+public class Payroll implements Serializable {
     private int payroll;
     private int employeeId;
     private String month;
@@ -10,6 +12,18 @@ public class Payroll {
     private float deductions;
     private float netPay;
     private String status;
+
+    public Payroll(int employeeId, String month, float baserate, float overtimeHours, float bonusAmount, float deductions, float netPay, String status) {
+        this.payroll = employeeId;
+        this.employeeId = employeeId;
+        this.month = month;
+        this.baserate = baserate;
+        this.overtimeHours = overtimeHours;
+        this.bonusAmount = bonusAmount;
+        this.deductions = deductions;
+        this.netPay = netPay;
+        this.status = status;
+    }
 
     public int getPayroll() {
         return payroll;
@@ -45,5 +59,9 @@ public class Payroll {
 
     public String getStatus() {
         return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

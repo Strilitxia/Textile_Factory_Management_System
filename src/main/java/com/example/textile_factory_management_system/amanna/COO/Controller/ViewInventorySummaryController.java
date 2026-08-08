@@ -1,5 +1,6 @@
 package com.example.textile_factory_management_system.amanna.COO.Controller;
 
+import com.example.textile_factory_management_system.amanna.COO.Model.RawMaterial;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -20,7 +21,7 @@ public class ViewInventorySummaryController
     @javafx.fxml.FXML
     private TableColumn<RawMaterial,String> materialNameTC;
     @javafx.fxml.FXML
-    private TableColumn<RawMaterail,Integer> unitPriceTC;
+    private TableColumn<RawMaterial,Integer> unitPriceTC;
     @javafx.fxml.FXML
     private TableColumn<RawMaterial,Integer>stockQuantityTc;
 

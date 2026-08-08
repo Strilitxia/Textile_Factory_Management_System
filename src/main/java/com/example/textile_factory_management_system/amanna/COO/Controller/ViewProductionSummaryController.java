@@ -25,10 +25,10 @@ public class ViewProductionSummaryController
 
     @javafx.fxml.FXML
     public void initialize() {
-         productionOutputIdTc.setCellValueFactory(new PropertyValueFactory<>("productionOutputId"));
-         batchIdTC.setCellValueFactory(new PropertyValueFactory<>("batchId" ));
+productionOutputIdTc.setCellValueFactory(new PropertyValueFactory<>("outputId"));
+         batchIdTC.setCellValueFactory(new PropertyValueFactory<>("batchId"));
          totalProducedTC.setCellValueFactory(new PropertyValueFactory<>("totalProduced"));
          defectCountTC.setCellValueFactory(new PropertyValueFactory<>("defectCount"));
-         useableCountTc.setCellValueFactory(new PropertyValueFactory<>("useableCount"));
+         useableCountTc.setCellValueFactory(new PropertyValueFactory<>("usableCount"));
     }
 }

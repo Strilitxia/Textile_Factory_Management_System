@@ -30,6 +30,10 @@ public class ProductionBatch implements Serializable {
         return quantity;
     }
 
+    public int getTargetQuantity() {
+        return quantity;
+    }
+
     public int getOrderId() {
         return orderId;
     }

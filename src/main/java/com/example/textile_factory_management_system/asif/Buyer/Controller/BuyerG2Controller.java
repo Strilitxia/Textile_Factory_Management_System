@@ -1,20 +1,31 @@
 package com.example.textile_factory_management_system.asif.Buyer.Controller;
 
+import com.example.textile_factory_management_system.NonUser.Product;
 import com.example.textile_factory_management_system.asif.Buyer.Model.Buyer;
 import com.example.textile_factory_management_system.utility.AlertHelper;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class BuyerG2Controller {
-    @javafx.fxml.FXML
+    @FXML
     private ComboBox<Integer> productTypeComboBox;
-    @javafx.fxml.FXML
+    @FXML
     private TextField bulkQuantityTF;
-    @javafx.fxml.FXML
+    @FXML
     private TextField customerIDTF;
 
-    @javafx.fxml.FXML
+    @FXML
+    public void initialize() {
+        ObservableList<Product> products = Buyer.browseProductCatalog();
+        for (Product p : products) {
+            productTypeComboBox.getItems().add(p.getProductId());
+        }
+    }
+
+    @FXML
     public void sendQuotationRequestBuutonOA(ActionEvent actionEvent) {
         if (productTypeComboBox.getValue() == null || bulkQuantityTF.getText().isBlank() || Integer.parseInt(bulkQuantityTF.getText())<1){
             AlertHelper.showError("Enter all accepted values");

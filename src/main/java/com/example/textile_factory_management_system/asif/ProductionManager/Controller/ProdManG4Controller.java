@@ -30,13 +30,13 @@ public class ProdManG4Controller {
     @FXML
     public void initialize(){
         taskDescriptionTC.setCellValueFactory(new PropertyValueFactory<>("description"));
-        taskIdTC.setCellValueFactory(new PropertyValueFactory<>("TaskId"));
+        taskIdTC.setCellValueFactory(new PropertyValueFactory<>("taskId"));
         workerIdTC.setCellValueFactory(new PropertyValueFactory<>("assignedTo"));
 
         ObservableList<Employee> emp = FileReadWrite.loadData(Employee.class,"Employees.bin");
         for (Employee e: emp){
-            if (e.getRole().equals("worker")){
-                selectWorkerComboBox.getItems().add(e.getEmployeeId());
+            if (e.getRole().equals("Worker")){
+                selectWorkerComboBox.getItems().add(e.getUserId());
             }
         }
     }

@@ -1,22 +1,36 @@
 package com.example.textile_factory_management_system.asif.Buyer.Controller;
 
+import com.example.textile_factory_management_system.NonUser.Product;
 import com.example.textile_factory_management_system.asif.Buyer.Model.Buyer;
 import com.example.textile_factory_management_system.utility.AlertHelper;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class BuyerG8Controller {
-    @javafx.fxml.FXML
+    @FXML
     private TextField commentTF;
-    @javafx.fxml.FXML
+    @FXML
     private ComboBox<Integer> selectRatingComboBox;
-    @javafx.fxml.FXML
+    @FXML
     private ComboBox<String> selectProductComboBox;
-    @javafx.fxml.FXML
+    @FXML
     private TextField customerIdTF;
 
-    @javafx.fxml.FXML
+    @FXML
+    public void initialize() {
+        ObservableList<Product> products = Buyer.browseProductCatalog();
+        for (Product p : products) {
+            selectProductComboBox.getItems().add(p.getProductType());
+        }
+        for (int i = 1; i <= 5; i++) {
+            selectRatingComboBox.getItems().add(i);
+        }
+    }
+
+    @FXML
     public void submitReviewButtonOA(ActionEvent actionEvent) {
         if (customerIdTF.getText().isBlank() || selectRatingComboBox.getValue()==null || selectProductComboBox.getValue()==null){
             AlertHelper.showError("Required field is missing");

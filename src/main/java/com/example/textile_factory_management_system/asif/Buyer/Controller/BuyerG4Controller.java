@@ -27,7 +27,7 @@ public class BuyerG4Controller {
 
     @FXML
     public void initialize(){
-        orderIdTC.setCellValueFactory(new PropertyValueFactory<>("scheduleDate"));
+        orderIdTC.setCellValueFactory(new PropertyValueFactory<>("orderId"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
         productTypeTC.setCellValueFactory(new PropertyValueFactory<>("productType"));
         quantityTC.setCellValueFactory(new PropertyValueFactory<>("quantity"));

@@ -17,7 +17,7 @@
       </Text>
       <TableView fx:id="productionOrderTV" layoutX="50.0" layoutY="126.0" prefHeight="200.0" prefWidth="484.0">
         <columns>
-          <TableColumn fx:id="oefderIdTC" prefWidth="100.0" text="Order ID" />
+          <TableColumn fx:id="orderIdTC" prefWidth="100.0" text="Order ID" />
           <TableColumn fx:id="customerIdTc" prefWidth="119.20001220703125" text="Customer ID" />
             <TableColumn fx:id="productTypeTC" prefWidth="133.5999755859375" text="Product Type" />
             <TableColumn fx:id="scheduleDateTC" prefWidth="132.0" text="Scheduled Date" />

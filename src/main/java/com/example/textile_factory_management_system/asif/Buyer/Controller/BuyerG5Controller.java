@@ -27,14 +27,14 @@ public class BuyerG5Controller {
 
     @FXML
     public void initialize(){
-        orderIdTC.setCellValueFactory(new PropertyValueFactory<>("scheduleDate"));
+        orderIdTC.setCellValueFactory(new PropertyValueFactory<>("orderId"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
         productTypeTC.setCellValueFactory(new PropertyValueFactory<>("productType"));
         quantityTC.setCellValueFactory(new PropertyValueFactory<>("quantity"));
     }
 
     @javafx.fxml.FXML
-    public void loadOrderButtonOA(ActionEvent actionEvent) {
+    public void loadPastOrderButtonOA(ActionEvent actionEvent) {
         ObservableList<Order> orders = Buyer.viewRealtimeOrderStatus();
         orderTV.getItems().clear();
         for (Order i : orders){

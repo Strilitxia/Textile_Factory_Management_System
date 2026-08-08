@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class Complaint {
+import java.io.Serializable;
+
+public class Complaint implements Serializable {
     private int complaintid;
     private  int workerId;
     private String details;

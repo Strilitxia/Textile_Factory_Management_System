@@ -4,8 +4,10 @@ import com.example.textile_factory_management_system.NonUser.Attendance;
 import com.example.textile_factory_management_system.NonUser.BankReceipt;
 import com.example.textile_factory_management_system.NonUser.Employee;
 import com.example.textile_factory_management_system.NonUser.Invoice;
+import com.example.textile_factory_management_system.NonUser.Complaint;
 import com.example.textile_factory_management_system.NonUser.LeaveRequest;
 import com.example.textile_factory_management_system.NonUser.MaterialRequisition;
+import com.example.textile_factory_management_system.NonUser.Payroll;
 import com.example.textile_factory_management_system.NonUser.Order;
 import com.example.textile_factory_management_system.NonUser.Product;
 import com.example.textile_factory_management_system.NonUser.ProductReview;
@@ -16,6 +18,7 @@ import com.example.textile_factory_management_system.NonUser.ProductionTask;
 import com.example.textile_factory_management_system.NonUser.Quotation;
 import com.example.textile_factory_management_system.NonUser.RFQ;
 import com.example.textile_factory_management_system.NonUser.ShiftChangeRequest;
+import com.example.textile_factory_management_system.amanna.COO.Model.RawMaterial;
 import com.example.textile_factory_management_system.amanna.Worker.Model.Worker;
 import com.example.textile_factory_management_system.utility.FileReadWrite;
 import javafx.application.Application;
@@ -45,9 +48,9 @@ public class HelloApplication extends Application {
         }
 
         // Employees.bin
-        Employee worker1 = new Employee(1, 123456, 5000, "Rahim", "worker", "Production", "Reliable", 4.2f);
-        Employee worker2 = new Employee(2, 234567, 5500, "Karim", "worker", "Production", "Punctual", 4.5f);
-        Employee worker3 = new Employee(3, 345678, 6000, "Jamil", "worker", "Production", "Team Lead", 4.7f);
+        Employee worker1 = new Employee(1, "rahim", "pass", "rahim@tfms.com", "Worker", 123456, 5000, "Rahim", "Production", "Reliable", 4.2f);
+        Employee worker2 = new Employee(2, "karim", "pass", "karim@tfms.com", "Worker", 234567, 5500, "Karim", "Production", "Punctual", 4.5f);
+        Employee worker3 = new Employee(3, "jamil", "pass", "jamil@tfms.com", "Worker", 345678, 6000, "Jamil", "Production", "Team Lead", 4.7f);
         FileReadWrite.append(worker1, "Employees.bin");
         FileReadWrite.append(worker2, "Employees.bin");
         FileReadWrite.append(worker3, "Employees.bin");
@@ -133,8 +136,8 @@ public class HelloApplication extends Application {
         FileReadWrite.append(pb2, "ProductionBatches.bin");
 
         // ProductionOutputs.bin
-        ProductionOutput po1 = new ProductionOutput(1, 1, 0, 0, 0);
-        ProductionOutput po2 = new ProductionOutput(2, 2, 0, 0, 0);
+        ProductionOutput po1 = new ProductionOutput(1, 1, 100, 5, 95);
+        ProductionOutput po2 = new ProductionOutput(2, 2, 200, 10, 190);
         FileReadWrite.append(po1, "ProductionOutputs.bin");
         FileReadWrite.append(po2, "ProductionOutputs.bin");
 
@@ -149,5 +152,25 @@ public class HelloApplication extends Application {
         MaterialRequisition mr2 = new MaterialRequisition("Thread", 50.0f);
         FileReadWrite.append(mr1, "MaterialRequisitions.bin");
         FileReadWrite.append(mr2, "MaterialRequisitions.bin");
+
+        // Payroll.bin
+        Payroll pr1 = new Payroll(1, "January", 5000.0f, 10.0f, 500.0f, 200.0f, 5300.0f, "Paid");
+        Payroll pr2 = new Payroll(2, "January", 5500.0f, 8.0f, 400.0f, 150.0f, 5750.0f, "Paid");
+        Payroll pr3 = new Payroll(3, "January", 6000.0f, 12.0f, 600.0f, 250.0f, 6350.0f, "Paid");
+        FileReadWrite.append(pr1, "Payroll.bin");
+        FileReadWrite.append(pr2, "Payroll.bin");
+        FileReadWrite.append(pr3, "Payroll.bin");
+
+        // Complaints.bin
+        Complaint c1 = new Complaint(1, 1, "Machine not working properly", "", "Unresolved");
+        FileReadWrite.append(c1, "Complaints.bin");
+
+        // RawMaterials.bin
+        RawMaterial rm1 = new RawMaterial(1, "Cotton", 500, 250, LocalDate.now().plusMonths(6));
+        RawMaterial rm2 = new RawMaterial(2, "Denim", 300, 800, LocalDate.now().plusMonths(8));
+        RawMaterial rm3 = new RawMaterial(3, "Silk", 100, 1500, LocalDate.now().plusMonths(12));
+        FileReadWrite.append(rm1, "RawMaterials.bin");
+        FileReadWrite.append(rm2, "RawMaterials.bin");
+        FileReadWrite.append(rm3, "RawMaterials.bin");
     }
 }

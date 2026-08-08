@@ -16,8 +16,28 @@ public class Attendance implements Serializable {
         this.outTime = outTime;
     }
 
+    public LocalDate getTimestamp() {
+        return timestamp;
+    }
+
     public int getEmployeeID() {
         return employeeID;
+    }
+
+    public String getInTime() {
+        return inTime;
+    }
+
+    public void setInTime(String inTime) {
+        this.inTime = inTime;
+    }
+
+    public String getOutTime() {
+        return outTime;
+    }
+
+    public void setOutTime(String outTime) {
+        this.outTime = outTime;
     }
 
     public String getAttendanceType() {

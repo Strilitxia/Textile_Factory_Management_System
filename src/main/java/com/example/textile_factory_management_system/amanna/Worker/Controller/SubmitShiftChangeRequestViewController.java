@@ -26,7 +26,7 @@ public class SubmitShiftChangeRequestViewController
     @javafx.fxml.FXML
     public void submitButtonOA(ActionEvent actionEvent) {
         success.setText(null);
-        if (currentShiftCB.getValue().isBlank() || desiredShiftCB.getValue().isBlank()) {
+        if (currentShiftCB.getValue() == null || currentShiftCB.getValue().isBlank() || desiredShiftCB.getValue() == null || desiredShiftCB.getValue().isBlank()) {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("Enter value of fields properly!");
             a.showAndWait();

@@ -2,10 +2,11 @@ module com.example.textile_factory_management_system {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-    requires com.example.textile_factory_management_system;
+    //requires com.example.textile_factory_management_system;
 
 
-    opens com.example.textile_factory_management_system to javafx.fxml;
+    opens com.example.textile_factory_management_system;
+    opens com.example.textile_factory_management_system.NonUser to javafx.base;
     exports com.example.textile_factory_management_system;
     exports com.example.textile_factory_management_system.amanna.COO.Controller;
     opens com.example.textile_factory_management_system.amanna.COO.Controller to javafx.fxml;

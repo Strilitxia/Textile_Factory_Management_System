@@ -34,6 +34,10 @@ public class Employee extends User implements Serializable {
         return accountbalance;
     }
 
+    public float getSalary() {
+        return accountbalance;
+    }
+
     public String getName() {
         return name;
     }
@@ -42,11 +46,19 @@ public class Employee extends User implements Serializable {
         return depertment;
     }
 
+    public String getDepartment() {
+        return depertment;
+    }
+
     public String getRemarks() {
         return remarks;
     }
 
     public float getPerformaneScore() {
+        return performaneScore;
+    }
+
+    public float getPerformanceScore() {
         return performaneScore;
     }
 }
