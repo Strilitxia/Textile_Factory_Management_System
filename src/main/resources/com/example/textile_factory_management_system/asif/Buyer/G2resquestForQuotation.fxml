@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.Buyer.Controller.BuyerG2Controller">
    <children>
       <Label layoutX="68.0" layoutY="48.0" text="Request For Quotation:">
          <font>
@@ -17,8 +16,8 @@
       </Label>
       <Label layoutX="68.0" layoutY="111.0" text="Select Product Type:" />
       <Label layoutX="68.0" layoutY="158.0" text="Enter Bulk Quantity:" />
-      <Button layoutX="68.0" layoutY="208.0" mnemonicParsing="false" text="Send Quotation Request" />
-      <ComboBox layoutX="200.0" layoutY="107.0" prefWidth="150.0" />
-      <TextField layoutX="195.0" layoutY="154.0" />
+      <Button layoutX="68.0" layoutY="208.0" mnemonicParsing="false" onAction="#sendQuotationRequestBuutonOA" text="Send Quotation Request" />
+      <ComboBox fx:id="productTypeComboBox" layoutX="200.0" layoutY="107.0" prefWidth="150.0" />
+      <TextField fx:id="bulkQuantityTF" layoutX="195.0" layoutY="154.0" />
    </children>
 </AnchorPane>

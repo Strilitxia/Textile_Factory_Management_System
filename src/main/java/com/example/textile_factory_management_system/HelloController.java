@@ -60,7 +60,7 @@ public class HelloController {
             } else if (usernameTF.getText().equals("worker")){
                 loadFXMLView("amanna/worker/WorkerView.fxml");
             } else if (usernameTF.getText().equals("buyer")){
-                loadFXMLView("asif/buyer/BuyerView.fxml");
+                loadFXMLView("asif/Buyer/BuyerView.fxml");
             } else if (usernameTF.getText().equals("productionmanager")){
                 loadFXMLView("asif/ProductionManager/productionManagerView.fxml");
             } else if (usernameTF.getText().equals("hrmanager")){
