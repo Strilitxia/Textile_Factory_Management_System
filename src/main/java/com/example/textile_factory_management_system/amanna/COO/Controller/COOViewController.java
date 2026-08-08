@@ -51,10 +51,6 @@ public class COOViewController {
     }
 
     @javafx.fxml.FXML
-    public void analyzProfitandLossSummaryOA(ActionEvent actionEvent) { loadFXMLView("Profit&LossSummaryView.fxml");
-    }
-
-    @javafx.fxml.FXML
     public void viewInventorySummaryButtonOA(ActionEvent actionEvent) { loadFXMLView("ViewInventorySummary.fxml");
     }
 
@@ -76,5 +72,9 @@ public class COOViewController {
 
     @javafx.fxml.FXML
     public void viewSalesSummaryButtonOA(ActionEvent actionEvent) { loadFXMLView("ViewSalesSummary.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void viewProductionTargetSummaryOA(ActionEvent actionEvent) { loadFXMLView("ProductionTargetSummaryView.fxml");
     }
 }

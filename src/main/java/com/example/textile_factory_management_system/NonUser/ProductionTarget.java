@@ -1,5 +1,7 @@
 package com.example.textile_factory_management_system.NonUser;
 
+import com.example.textile_factory_management_system.utility.FileReadWrite;
+
 import java.time.LocalDate;
 
 public class ProductionTarget {
@@ -8,15 +10,18 @@ public class ProductionTarget {
     private LocalDate deadline;
     private String status;
 
-    public ProductionTarget(int targetId, int targetAmount, int completedQuota, String productType, LocalDate deadline, String status) {
-        this.targetId = targetId;
+    public ProductionTarget(int targetAmount, String productType, LocalDate deadline) {
+        this.targetId = this.generateTargetId();
         this.targetAmount = targetAmount;
-        this.completedQuota = completedQuota;
+        this.completedQuota = 0;
         this.productType = productType;
         this.deadline = deadline;
-        this.status = status;
+        this.status = "Incomplete";
     }
 
+    private int generateTargetId() {
+        return (FileReadWrite.loadData(ProductionTarget.class, "ProductionTargets.bin")).size() + 1;
+    }
     public int getTargetId() {
         return targetId;
     }
@@ -39,5 +44,13 @@ public class ProductionTarget {
 
     public String getStatus() {
         return status;
+    }
+
+    public void setCompletedQuota(int completedQuota) {
+        this.completedQuota = completedQuota;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
