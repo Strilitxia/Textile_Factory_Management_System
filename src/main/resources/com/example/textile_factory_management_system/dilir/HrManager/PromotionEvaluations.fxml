@@ -6,16 +6,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.PromotionEvaluationsController">
+<AnchorPane fx:id="workerComboBox" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.PromotionEvaluationsController">
    <children>
       <Label layoutX="32.0" layoutY="24.0" text="Worker:" />
       <ComboBox layoutX="83.0" layoutY="20.0" prefWidth="150.0" />
       <Label layoutX="32.0" layoutY="69.0" text="Remarks:" />
       <Label layoutX="322.0" layoutY="24.0" text="Score:" />
-      <TextField layoutX="367.0" layoutY="20.0" />
-      <TextField layoutX="84.0" layoutY="65.0" />
-      <Button layoutX="251.0" layoutY="128.0" mnemonicParsing="false" text="Save Evaluation" />
-      <Label alignment="CENTER" disable="true" layoutX="189.0" layoutY="183.0" prefHeight="96.0" prefWidth="219.0" style="-fx-background-color: #f5d3bc;" text="Show" />
+      <TextField fx:id="scoreTF" layoutX="367.0" layoutY="20.0" />
+      <TextField fx:id="remarksTF" layoutX="84.0" layoutY="65.0" />
+      <Button layoutX="251.0" layoutY="128.0" mnemonicParsing="false" onAction="#saveEvaluationButtonOA" text="Save Evaluation" />
+      <Label fx:id="resultLabel" alignment="CENTER" disable="true" layoutX="189.0" layoutY="183.0" prefHeight="96.0" prefWidth="219.0" style="-fx-background-color: #f5d3bc;" text="Show" />
    </children>
 </AnchorPane>

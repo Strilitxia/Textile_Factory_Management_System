@@ -7,29 +7,28 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.LeaveApprovalsController">
    <children>
-      <TableView layoutY="44.0" prefHeight="200.0" prefWidth="600.0">
+      <TableView fx:id="leaveTableView" layoutY="44.0" prefHeight="200.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="160.0" text="Employee" />
-          <TableColumn prefWidth="151.20001220703125" text="From" />
-            <TableColumn prefWidth="152.79998779296875" text="To" />
-            <TableColumn prefWidth="136.0" text="Status" />
+          <TableColumn fx:id="employeeCol" prefWidth="160.0" text="Employee" />
+          <TableColumn fx:id="fromCol" prefWidth="151.20001220703125" text="From" />
+            <TableColumn fx:id="toCol" prefWidth="152.79998779296875" text="To" />
+            <TableColumn fx:id="statusCol" prefWidth="136.0" text="Status" />
         </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="14.0" text="Leave Request Table:" />
-      <Label alignment="CENTER" disable="true" layoutX="154.0" layoutY="263.0" prefHeight="30.0" prefWidth="314.0" style="-fx-background-color: #f5d3bc;" text="Selected Info" />
-      <Button layoutX="54.0" layoutY="313.0" mnemonicParsing="false" text="Approve">
+      <Label fx:id="selectedInfoLabel" alignment="CENTER" disable="true" layoutX="154.0" layoutY="263.0" prefHeight="30.0" prefWidth="314.0" style="-fx-background-color: #f5d3bc;" text="Selected Info" />
+      <Button layoutX="54.0" layoutY="313.0" mnemonicParsing="false" onAction="#approveButtonOA" text="Approve">
          <effect>
             <DropShadow />
          </effect>
       </Button>
-      <Button layoutX="487.0" layoutY="313.0" mnemonicParsing="false" text="Reject">
+      <Button layoutX="487.0" layoutY="313.0" mnemonicParsing="false" onAction="#rejectButtonOA" text="Reject">
          <effect>
             <DropShadow />
          </effect>
       </Button>
-      <Label alignment="CENTER" disable="true" layoutX="226.0" layoutY="339.0" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: #f5d3bc;" text="Status" />
+      <Label fx:id="resultLabel" alignment="CENTER" disable="true" layoutX="226.0" layoutY="339.0" prefHeight="30.0" prefWidth="138.0" style="-fx-background-color: #f5d3bc;" text="Status" />
    </children>
 </AnchorPane>

@@ -5,19 +5,22 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.WorkerEvaluationReportsController">
    <children>
       <Label layoutX="36.0" layoutY="25.0" text="Department:" />
-      <ComboBox layoutX="111.0" layoutY="21.0" prefWidth="150.0" />
-      <Button layoutX="383.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="117.0" text="Generate Report" />
-      <TableView layoutY="100.0" prefHeight="200.0" prefWidth="600.0">
+      <ComboBox fx:id="departmentComboBox" layoutX="111.0" layoutY="21.0" prefWidth="150.0" />
+      <Button layoutX="383.0" layoutY="21.0" mnemonicParsing="false" onAction="#generateReportButtonOA" prefHeight="26.0" prefWidth="117.0" text="Generate Report">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <TableView fx:id="reportTableView" layoutY="100.0" prefHeight="200.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="188.0" text="Name" />
-          <TableColumn prefWidth="200.79998779296875" text="Attendance % " />
-            <TableColumn prefWidth="210.4000244140625" text="Average Score" />
+          <TableColumn fx:id="nameCol" prefWidth="188.0" text="Name" />
+          <TableColumn fx:id="attendanceCol" prefWidth="200.79998779296875" text="Attendance % " />
+            <TableColumn fx:id="avgScoreCol" prefWidth="210.4000244140625" text="Average Score" />
         </columns>
       </TableView>
    </children>
