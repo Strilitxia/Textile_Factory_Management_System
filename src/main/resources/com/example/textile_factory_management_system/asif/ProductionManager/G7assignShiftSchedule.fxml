@@ -5,31 +5,29 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="476.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.ProductionManager.Controller.ProdManG7Controller">
+<AnchorPane prefHeight="476.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.ProductionManager.Controller.ProdManG7Controller">
     <children>
         <Label layoutX="57.0" layoutY="48.0" text="Assign Shift Schedule To Worker:">
             <font>
                 <Font size="24.0" />
             </font>
         </Label>
-        <Label layoutX="53.0" layoutY="105.0" text="Select Worker:" />
-        <ComboBox fx:id="selectWorkerComboBox" layoutX="153.0" layoutY="100.0" prefWidth="150.0" />
-        <Label layoutX="57.0" layoutY="150.0" text="Shift Time:" />
-        <TextField fx:id="shiftTimeTF" layoutX="153.0" layoutY="146.0" />
-        <Label layoutX="57.0" layoutY="206.0" text="Daily Target: " />
-        <TextField fx:id="dailyTargetTF" layoutX="148.0" layoutY="202.0" />
-        <Button layoutX="421.0" layoutY="100.0" mnemonicParsing="false" onAction="#assignScheduleButtonOA" text="Assign Schedule" />
-        <TableView fx:id="workerScheduleTV" layoutX="33.0" layoutY="270.0" prefHeight="119.0" prefWidth="632.0">
+        <Label layoutX="114.0" layoutY="263.0" text="Select Worker:" />
+        <ComboBox fx:id="selectWorkerComboBox" layoutX="214.0" layoutY="258.0" prefWidth="150.0" />
+        <Label layoutX="118.0" layoutY="308.0" text="Shift Time:" />
+        <Label layoutX="118.0" layoutY="364.0" text="Daily Target: " />
+        <Button layoutX="482.0" layoutY="258.0" mnemonicParsing="false" onAction="#assignScheduleButtonOA" text="Assign Schedule" />
+        <TableView fx:id="workerScheduleTV" layoutX="42.0" layoutY="101.0" prefHeight="119.0" prefWidth="632.0">
             <columns>
                 <TableColumn fx:id="workerIdTC" prefWidth="196.0" text="Worker ID" />
                 <TableColumn fx:id="shiftTimeTC" prefWidth="177.0" text="Shift Time" />
                 <TableColumn fx:id="dailyTimeTC" prefWidth="257.0" text="Daily Time" />
             </columns>
         </TableView>
-        <Button layoutX="421.0" layoutY="138.0" mnemonicParsing="false" onAction="#loadScheduleButtonOA" text="Load Schedule" />
+      <ComboBox fx:id="shiftTimeCB" layoutX="214.0" layoutY="304.0" prefWidth="150.0" />
+      <ComboBox fx:id="dailyTimeCB" layoutX="214.0" layoutY="360.0" prefWidth="150.0" />
     </children>
 </AnchorPane>

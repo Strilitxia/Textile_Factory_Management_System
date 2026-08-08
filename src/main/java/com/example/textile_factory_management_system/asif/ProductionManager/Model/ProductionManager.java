@@ -1,8 +1,7 @@
 package com.example.textile_factory_management_system.asif.ProductionManager.Model;
-import com.example.textile_factory_management_system.NonUser.ProductionBatch;
-import com.example.textile_factory_management_system.NonUser.ProductionOutput;
-import com.example.textile_factory_management_system.NonUser.ProductionTarget;
+import com.example.textile_factory_management_system.NonUser.*;
 import com.example.textile_factory_management_system.User;
+import com.example.textile_factory_management_system.amanna.Worker.Model.Worker;
 import com.example.textile_factory_management_system.utility.FileReadWrite;
 import javafx.collections.ObservableList;
 
@@ -13,6 +12,8 @@ public class ProductionManager extends User {
 
     private static final String PRODUCTIONBATCH_FILE = "ProductionBatches.bin";
     private static  final String PRODUCTIONOUTPUT_FILE = "ProductionOutputs";
+    private static final String MATERIAL_REQUISITION_FILE = "MaterialRequisitions.bin";
+    private static final String WORKERS_FILE = "Workers.bin";
 
     public ProductionManager(int userId, String username, String password, String email, String role) {
         super(userId, username, password, email, role);
@@ -49,5 +50,19 @@ public class ProductionManager extends User {
     public static int generateProductionOutputID(){
         ObservableList<ProductionOutput> outputs = FileReadWrite.loadData(ProductionOutput.class,"ProductionBatches.bin");
         return outputs.size() + 1;
+    }
+
+    public static boolean submitMaterialRequisition(String materialType, float amount) {
+        try {
+            MaterialRequisition materialRequisition = new MaterialRequisition(materialType, amount);
+            FileReadWrite.append(materialRequisition, MATERIAL_REQUISITION_FILE);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static ObservableList<Worker> loadAllWorkers() {
+        return FileReadWrite.loadData(Worker.class, WORKERS_FILE);
     }
 }

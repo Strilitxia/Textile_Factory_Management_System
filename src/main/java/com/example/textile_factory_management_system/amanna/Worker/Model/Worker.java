@@ -7,17 +7,38 @@ import com.example.textile_factory_management_system.User;
 import com.example.textile_factory_management_system.utility.FileReadWrite;
 import javafx.collections.ObservableList;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Worker extends User {
+public class Worker extends User implements Serializable {
+
+    private String shiftTime, dailyTime;
 
     private static final String LEAVE_REQUESTS_FILE = "LeaveRequests.bin";
     private static final String SHIFT_CHANGE_REQUESTS_FILE = "ShiftChangeRequests.bin";
     private static final String ATTENDANCE_FILE = "Attendance.bin";
 
-    public Worker(int userId, String username, String password, String email, String role) {
+    public Worker(int userId, String username, String password, String email, String role, String shiftTime, String dailyTime) {
         super(userId, username, password, email, role);
+        this.shiftTime = shiftTime;
+        this.dailyTime = dailyTime;
+    }
+
+    public String getShiftTime() {
+        return shiftTime;
+    }
+
+    public String getDailyTime() {
+        return dailyTime;
+    }
+
+    public void setShiftTime(String shiftTime) {
+        this.shiftTime = shiftTime;
+    }
+
+    public void setDailyTime(String dailyTime) {
+        this.dailyTime = dailyTime;
     }
 
     public static boolean submitLeaveRequest(LocalDate leaveDate, String reason) {
