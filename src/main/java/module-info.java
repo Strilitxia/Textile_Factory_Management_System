@@ -9,4 +9,8 @@ module com.example.textile_factory_management_system {
     opens com.example.textile_factory_management_system.amanna.COO.Controller to javafx.fxml;
     exports com.example.textile_factory_management_system.amanna.Worker.Controller;
     opens com.example.textile_factory_management_system.amanna.Worker.Controller to javafx.fxml;
+    opens com.example.textile_factory_management_system.asif.Buyer.Controller to javafx.fxml;
+    exports com.example.textile_factory_management_system.asif.Buyer.Controller;
+    opens com.example.textile_factory_management_system.asif.ProductionManager.Controller to javafx.fxml;
+    exports com.example.textile_factory_management_system.asif.ProductionManager.Controller;
 }

@@ -7,22 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="462.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="462.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.ProductionManager.Controller.ProdManG5Controller">
    <children>
       <Label layoutX="59.0" layoutY="46.0" text="Approve Shift Change Request:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TableView layoutX="38.0" layoutY="96.0" prefHeight="219.0" prefWidth="594.0">
+      <TableView fx:id="shiftChangeTV" layoutX="38.0" layoutY="96.0" prefHeight="219.0" prefWidth="594.0">
         <columns>
-          <TableColumn prefWidth="173.0" text="Worker ID" />
-          <TableColumn prefWidth="181.0" text="Old Shift Time" />
-            <TableColumn prefWidth="207.0" text="New Shift Time" />
+          <TableColumn fx:id="wrorkerIdTC" prefWidth="173.0" text="Worker ID" />
+          <TableColumn fx:id="oldShiftTimeTC" prefWidth="181.0" text="Old Shift Time" />
+            <TableColumn fx:id="newShiftTimeTC" prefWidth="207.0" text="New Shift Time" />
         </columns>
       </TableView>
-      <Button layoutX="59.0" layoutY="339.0" mnemonicParsing="false" text="Load Request Table" />
-      <Button layoutX="268.0" layoutY="339.0" mnemonicParsing="false" text="Approve New Worker Schedule" />
+      <Button layoutX="59.0" layoutY="339.0" mnemonicParsing="false" onAction="#loadRequestButtonOA" text="Load Request Table" />
+      <Button layoutX="268.0" layoutY="339.0" mnemonicParsing="false" onAction="#approveNewWorkerScheduleButtonOA" text="Approve New Worker Schedule" />
    </children>
 </AnchorPane>

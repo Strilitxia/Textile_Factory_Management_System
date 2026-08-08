@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="443.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="443.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.Buyer.Controller.BuyerG5Controller">
     <children>
         <Label layoutX="55.0" layoutY="50.0" text="View Past Orders:">
             <font>
                 <Font size="24.0" />
             </font>
         </Label>
-        <TableView layoutX="34.0" layoutY="110.0" prefHeight="200.0" prefWidth="562.0">
+        <TableView fx:id="orderTV" layoutX="34.0" layoutY="110.0" prefHeight="200.0" prefWidth="562.0">
             <columns>
-                <TableColumn prefWidth="101.0" text="Order ID" />
-                <TableColumn prefWidth="107.0" text="Product Type" />
-                <TableColumn prefWidth="107.0" text="Schedule Date" />
-                <TableColumn prefWidth="107.0" text="Quantity" />
-                <TableColumn prefWidth="107.0" text="Status" />
+                <TableColumn fx:id="orderIdTC" prefWidth="101.0" text="Order ID" />
+                <TableColumn fx:id="productTypeTC" prefWidth="107.0" text="Product Type" />
+                <TableColumn fx:id="scheduleDateTC" prefWidth="107.0" text="Schedule Date" />
+                <TableColumn fx:id="quantityTC" prefWidth="107.0" text="Quantity" />
+                <TableColumn fx:id="statusTC" prefWidth="107.0" text="Status" />
             </columns>
         </TableView>
-        <Button layoutX="259.0" layoutY="358.0" mnemonicParsing="false" text="Load Past Orders" />
+        <Button layoutX="259.0" layoutY="358.0" mnemonicParsing="false" onAction="#loadPastOrderButtonOA" text="Load Past Orders" />
     </children>
 </AnchorPane>

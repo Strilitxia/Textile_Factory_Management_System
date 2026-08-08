@@ -6,7 +6,7 @@ import javafx.scene.text.Text;
 public class MonthlyPerformanceRecordViewController
 {
     @javafx.fxml.FXML
-    private ComboBox selesctMontCB;
+    private ComboBox <String> selesctMontCB;
     @javafx.fxml.FXML
     private TextField numberOfOrdersTF;
     @javafx.fxml.FXML
@@ -22,8 +22,10 @@ public class MonthlyPerformanceRecordViewController
     @javafx.fxml.FXML
     private TextField quotationReceivedTF;
     @javafx.fxml.FXML
-    private ComboBox selesctYearCB;
+    private ComboBox <String>  selectYearCB;
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectYearCB.getItems().addAll("");
+        selectYearCB.getItems().addAll("");
     }}

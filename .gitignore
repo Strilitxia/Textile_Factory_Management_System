@@ -37,3 +37,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+#amanna broken codes
+/Users/asif/IdeaProjects/Textile_Factory_Management_System/src/main/java/com/example/textile_factory_management_system/amanna

@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="449.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="449.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.ProductionManager.Controller.ProdManG3Controller">
    <children>
       <Label layoutX="45.0" layoutY="44.0" text="View And Update Production Progress:">
          <font>
@@ -18,22 +17,22 @@
          </font>
       </Label>
       <Label layoutX="45.0" layoutY="107.0" text="Select Production Batch:" />
-      <ComboBox layoutX="184.0" layoutY="103.0" prefWidth="150.0" />
+      <ComboBox fx:id="selectProductionBatchComboBox" layoutX="184.0" layoutY="103.0" prefWidth="150.0" />
       <Label layoutX="50.0" layoutY="243.0" text="Total Produced:" />
       <Label layoutX="50.0" layoutY="287.0" text="Defect Count:" />
       <Label layoutX="357.0" layoutY="243.0" text="Usable Count:" />
-      <TableView layoutX="45.0" layoutY="136.0" prefHeight="82.0" prefWidth="608.0">
+      <TableView fx:id="productionBatchTV" layoutX="45.0" layoutY="136.0" prefHeight="82.0" prefWidth="608.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Batch ID" />
-            <TableColumn prefWidth="93.0" text="Target Quantity" />
-          <TableColumn prefWidth="97.0" text="Total Produced" />
-            <TableColumn prefWidth="97.0" text="Defect Count" />
-            <TableColumn prefWidth="97.0" text="Usable Count" />
+          <TableColumn fx:id="batchId" prefWidth="75.0" text="Batch ID" />
+            <TableColumn fx:id="targetQuantityTC" prefWidth="93.0" text="Target Quantity" />
+          <TableColumn fx:id="totalProducedTC" prefWidth="97.0" text="Total Produced" />
+            <TableColumn fx:id="defectCountTC" prefWidth="97.0" text="Defect Count" />
+            <TableColumn fx:id="usableCountTC" prefWidth="97.0" text="Usable Count" />
         </columns>
       </TableView>
-      <TextField layoutX="147.0" layoutY="239.0" />
-      <TextField layoutX="444.0" layoutY="239.0" />
-      <TextField layoutX="147.0" layoutY="283.0" />
-      <Button layoutX="50.0" layoutY="328.0" mnemonicParsing="false" text="Update Progeress" />
+      <TextField fx:id="totalProducedTF" layoutX="147.0" layoutY="239.0" />
+      <TextField fx:id="usableCountTF" layoutX="444.0" layoutY="239.0" />
+      <TextField fx:id="defectCountTF" layoutX="147.0" layoutY="283.0" />
+      <Button layoutX="50.0" layoutY="328.0" mnemonicParsing="false" onAction="#updateProgeressButtonOA" text="Update Progeress" />
    </children>
 </AnchorPane>

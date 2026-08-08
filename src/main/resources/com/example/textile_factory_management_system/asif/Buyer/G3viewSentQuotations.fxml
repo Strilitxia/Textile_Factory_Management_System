@@ -7,22 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="423.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="423.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.Buyer.Controller.BuyerG3Controller">
    <children>
       <Label layoutX="40.0" layoutY="49.0" text="View Quotations Sent By Sales Department:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="60.0" layoutY="359.0" mnemonicParsing="false" text="Load Quotations" />
-      <TableView layoutX="40.0" layoutY="106.0" prefHeight="200.0" prefWidth="563.0">
+      <Button layoutX="60.0" layoutY="359.0" mnemonicParsing="false" onAction="#loadQuotationButtonOA" text="Load Quotations" />
+      <TableView fx:id="quotationTV" layoutX="40.0" layoutY="106.0" prefHeight="200.0" prefWidth="563.0">
         <columns>
-          <TableColumn prefWidth="103.0" text="Rfq ID" />
-            <TableColumn prefWidth="149.0" text="Product Type" />
-          <TableColumn prefWidth="149.0" text="Proposefd Unit Price" />
+          <TableColumn fx:id="rfqIdTC" prefWidth="103.0" text="Rfq ID" />
+            <TableColumn fx:id="productTypeTC" prefWidth="149.0" text="Product Type" />
+          <TableColumn fx:id="proposedUnitPriceTC" prefWidth="149.0" text="Proposefd Unit Price" />
         </columns>
       </TableView>
-      <Button layoutX="216.0" layoutY="359.0" mnemonicParsing="false" text="Accept Quotation" />
+      <Button layoutX="216.0" layoutY="359.0" mnemonicParsing="false" onAction="#acceptQuotationButtonOA" text="Accept Quotation" />
    </children>
 </AnchorPane>

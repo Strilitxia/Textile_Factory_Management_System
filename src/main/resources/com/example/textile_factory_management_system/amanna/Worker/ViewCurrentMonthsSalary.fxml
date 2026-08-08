@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.amanna.Worker.Controller.ViewCurrentMonthsSalary">
    <children>
-      <Button layoutX="403.0" layoutY="104.0" mnemonicParsing="false" onAction="#myPaySlipbuttonOA" text="My PaySlip" />
-      <TableView fx:id="tableViewTV" layoutX="289.0" layoutY="153.0" prefHeight="200.0" prefWidth="282.0">
+      <Text fx:id="viewCurrentMonthSalaryLabel" layoutX="55.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW CURRENT MONTH SALARY">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <Label layoutX="64.0" layoutY="67.0" text="PayRoll ID" />
+      <TextField fx:id="payrollIdTf" layoutX="127.0" layoutY="63.0" />
+      <Label layoutX="288.0" layoutY="66.0" prefHeight="18.0" prefWidth="124.0" text="Employee ID" />
+      <TextField fx:id="employeeIdTF" layoutX="367.0" layoutY="63.0" />
+      <Label layoutX="77.0" layoutY="116.0" text="Month" />
+      <ComboBox fx:id="monthCB" layoutX="127.0" layoutY="104.0" prefWidth="150.0" />
+      <TableView fx:id="currentMonthSalaryTV" layoutX="102.0" layoutY="158.0" prefHeight="200.0" prefWidth="364.0">
         <columns>
-          <TableColumn fx:id="baiscPAyTC" prefWidth="75.0" text="Basic Pay" />
-          <TableColumn fx:id="deductionsTC" prefWidth="75.0" text="Deductions" />
-            <TableColumn fx:id="totalPayableAmountTC" prefWidth="131.19998779296873" text="Total Payable Amount" />
+          <TableColumn fx:id="baseRateTc" prefWidth="75.0" text="Base Rate" />
+          <TableColumn fx:id="overtimeHoursTc" prefWidth="99.20001220703125" text="Overtime hours" />
+            <TableColumn fx:id="BonusAmountTC" prefWidth="90.39996337890625" text="Bonus Amount" />
+            <TableColumn fx:id="netPayTC" prefWidth="95.199951171875" text="netPay" />
+            <TableColumn prefWidth="17.60003662109375" text="C2" />
         </columns>
       </TableView>
    </children>

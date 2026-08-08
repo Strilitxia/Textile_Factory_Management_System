@@ -2,25 +2,29 @@ package com.example.textile_factory_management_system.amanna.Worker.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 
 public class ViewAttendanceRecord
 {
+
     @javafx.fxml.FXML
-    private TableColumn datesTC;
+    private TableColumn outTimeTC;
     @javafx.fxml.FXML
-    private TableView tableViewTV;
+    private TableView attendanceRecordTV;
     @javafx.fxml.FXML
-    private TableColumn clockOutTC;
+    private TableColumn inTimeTC;
     @javafx.fxml.FXML
-    private Button myAttendanceButtonOA;
+    private TableColumn dateTC;
     @javafx.fxml.FXML
-    private TableColumn clockinTC;
+    private Text vieAttendanceRecordLabel;
+    @javafx.fxml.FXML
+    private TextField employeeIdTF;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void myAttendanceButtonOA(ActionEvent actionEvent) {
     }
 }
