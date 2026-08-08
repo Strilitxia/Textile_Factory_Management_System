@@ -5,4 +5,9 @@ public class Product {
     private String description;
     private float price;
 
+    public Product(int productId, String description, float price) {
+        this.productId = productId;
+        this.description = description;
+        this.price = price;
+    }
 }
