@@ -12,6 +12,8 @@ public class Buyer extends User {
     private static final String RFQS_FILE = "RFQs.bin";
     private static final String QUOTATIONS_FILE = "Quotations.bin";
     private static final String ORDERS_FILE = "Orders.bin";
+    private static final String INVOICE_FILE = "Invoices.bin";
+    private static final String REVIEW_FILE = "Reviews.bin";
 
     public Buyer(int userId, String username, String password, String email, String role) {
         super(userId, username, password, email, role);
@@ -63,5 +65,27 @@ public class Buyer extends User {
 
     public static ObservableList<Order> viewRealtimeOrderStatus(){
         return FileReadWrite.loadData(Order.class,ORDERS_FILE);
+    }
+
+    public static Invoice viewInvoice(int orderId) {
+        ObservableList<Invoice> invoices = FileReadWrite.loadData(Invoice.class, INVOICE_FILE);
+        for (Invoice i : invoices) {
+            if (i.getOrderId() == orderId) {
+                return i;
+            }
+        }
+        return null;
+    }
+
+    public static boolean submitProductReview(String productType, int customerId, int ratingStars, String comment) {
+        try {
+            ObservableList<ProductReview> reviews = FileReadWrite.loadData(ProductReview.class,REVIEW_FILE);
+            int reviewId = reviews.size() + 1;
+            ProductReview productReview = new ProductReview(reviewId, productType, customerId, ratingStars, comment);
+            FileReadWrite.append(productReview, REVIEW_FILE);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

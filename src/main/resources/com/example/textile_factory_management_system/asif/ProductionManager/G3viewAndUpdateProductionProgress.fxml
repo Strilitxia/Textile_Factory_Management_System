@@ -34,5 +34,6 @@
       <TextField fx:id="usableCountTF" layoutX="444.0" layoutY="239.0" />
       <TextField fx:id="defectCountTF" layoutX="147.0" layoutY="283.0" />
       <Button layoutX="50.0" layoutY="328.0" mnemonicParsing="false" onAction="#updateProgeressButtonOA" text="Update Progeress" />
+      <Button layoutX="369.0" layoutY="104.0" mnemonicParsing="false" onAction="#loadBatchInfoButtonOA" text="Load Batch Info" />
    </children>
 </AnchorPane>
