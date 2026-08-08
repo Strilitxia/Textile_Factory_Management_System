@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     protected int userId;
     protected String username,password,email,role;
 
@@ -14,6 +16,10 @@ public class User {
 
     public int getUserId() {
         return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {

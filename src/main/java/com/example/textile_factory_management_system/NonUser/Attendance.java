@@ -1,8 +1,9 @@
 package com.example.textile_factory_management_system.NonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Attendance {
+public class Attendance implements Serializable {
     private LocalDate timestamp;
     private int employeeID;
     private String attendanceType,inTime,outTime;

@@ -3,9 +3,10 @@ package com.example.textile_factory_management_system.NonUser;
 import com.example.textile_factory_management_system.utility.FileReadWrite;
 import javafx.collections.ObservableList;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Order {
+public class Order implements Serializable {
     protected int customerId, orderId, quantity;
     protected String productType,status;
     protected LocalDate scheduleDate;

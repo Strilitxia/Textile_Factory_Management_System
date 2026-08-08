@@ -1,8 +1,9 @@
 package com.example.textile_factory_management_system.NonUser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class LeaveRequest {
+public class LeaveRequest implements Serializable {
     private int requestid;
     private int workerid;
     private LocalDate leaveDates;

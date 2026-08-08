@@ -2,9 +2,10 @@ package com.example.textile_factory_management_system.NonUser;
 
 import com.example.textile_factory_management_system.utility.FileReadWrite;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ProductionTarget {
+public class ProductionTarget implements Serializable {
     private int targetId, targetAmount, completedQuota;
     private String productType;
     private LocalDate deadline;
