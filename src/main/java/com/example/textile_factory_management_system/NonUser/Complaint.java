@@ -5,9 +5,9 @@ public class Complaint {
     private  int workerId;
     private String details;
     private String resolutionRemarks;
-    private boolean status;
+    private String status;
 
-    public Complaint(int complaintid, int workerId, String details, String resolutionRemarks, boolean status) {
+    public Complaint(int complaintid, int workerId, String details, String resolutionRemarks, String status) {
         this.complaintid = complaintid;
         this.workerId = workerId;
         this.details = details;
@@ -47,11 +47,11 @@ public class Complaint {
         this.resolutionRemarks = resolutionRemarks;
     }
 
-    public boolean isStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

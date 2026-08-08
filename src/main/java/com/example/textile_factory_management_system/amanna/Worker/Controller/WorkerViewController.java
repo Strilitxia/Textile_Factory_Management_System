@@ -61,7 +61,7 @@ public class WorkerViewController {
     }
 
     @javafx.fxml.FXML
-    public void assignedShifttimeAttendancebuttonOA(ActionEvent actionEvent) {loadFXMLView("AssignedShiftTimeAttendanceView.fxml");
+    public void assignedShifttimeAttendancebuttonOA(ActionEvent actionEvent) {loadFXMLView("ClockInView.fxml");
     }
 
     @javafx.fxml.FXML
@@ -73,6 +73,6 @@ public class WorkerViewController {
     }
 
     @javafx.fxml.FXML
-    public void attendanceBeforeClockingOutButtonOA(ActionEvent actionEvent) {loadFXMLView("ProvideAttendanceView.fxml");
+    public void attendanceBeforeClockingOutButtonOA(ActionEvent actionEvent) {loadFXMLView("ClockOutView.fxml");
     }
 }

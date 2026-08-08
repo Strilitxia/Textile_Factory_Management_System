@@ -9,12 +9,6 @@ public class ProductionTask implements Serializable {
     private int assignedTo;
     private String description;
 
-    public ProductionTask(int taskId, int assignedTo, String description) {
-        this.taskId = taskId;
-        this.assignedTo = assignedTo;
-        this.description = description;
-    }
-
     public int getTaskId() {
         return taskId;
     }
