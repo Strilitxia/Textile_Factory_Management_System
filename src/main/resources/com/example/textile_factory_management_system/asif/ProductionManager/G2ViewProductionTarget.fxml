@@ -7,23 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="419.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="419.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.ProductionManager.Controller.ProdManG2Controller">
    <children>
       <Label layoutX="43.0" layoutY="38.0" text="View Production Target Assigned by COO">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TableView layoutX="43.0" layoutY="116.0" prefHeight="200.0" prefWidth="564.0">
+      <TableView fx:id="viewProductionTargetTV" layoutX="43.0" layoutY="116.0" prefHeight="200.0" prefWidth="564.0">
         <columns>
-            <TableColumn prefWidth="75.0" text="Target ID" />
-          <TableColumn prefWidth="107.0" text="Product Type" />
-          <TableColumn prefWidth="113.0" text="Target Amount" />
-            <TableColumn prefWidth="113.0" text="Completed Quuota" />
-            <TableColumn prefWidth="113.0" text="Deadline" />
+            <TableColumn fx:id="targetIdTC" prefWidth="75.0" text="Target ID" />
+          <TableColumn fx:id="productTypeTC" prefWidth="107.0" text="Product Type" />
+          <TableColumn fx:id="targetAmountTC" prefWidth="113.0" text="Target Amount" />
+            <TableColumn fx:id="completedQuotaTC" prefWidth="113.0" text="Completed Quuota" />
+            <TableColumn fx:id="deadlineTC" prefWidth="113.0" text="Deadline" />
         </columns>
       </TableView>
-      <Button layoutX="43.0" layoutY="343.0" mnemonicParsing="false" text="Load Target" />
+      <Button layoutX="43.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadTargetButtonOA" text="Load Target" />
    </children>
 </AnchorPane>
