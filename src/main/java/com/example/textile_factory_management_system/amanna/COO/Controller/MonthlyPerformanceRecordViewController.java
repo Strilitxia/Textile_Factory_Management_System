@@ -1,5 +1,6 @@
 package com.example.textile_factory_management_system.amanna.COO.Controller;
 
+import com.example.textile_factory_management_system.amanna.COO.Model.COO;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -7,30 +8,27 @@ import javafx.scene.text.Text;
 public class MonthlyPerformanceRecordViewController
 {
     @javafx.fxml.FXML
-    private TextField numberOfOrdersTF;
-    @javafx.fxml.FXML
     private Text monthlyPerformanceReportLabel;
     @javafx.fxml.FXML
-    private TextField monthTF;
+    private ComboBox<String> selesctMontCB;
     @javafx.fxml.FXML
-    private TextField productionBatchesTF;
+    private ComboBox<Integer> selesctYearCB;
     @javafx.fxml.FXML
-    private TextField workersonLeaveTF;
-    @javafx.fxml.FXML
-    private TextField quotationReceivedTF;
-    @javafx.fxml.FXML
-    private ComboBox selesctMontCB;
-    @javafx.fxml.FXML
-    private ComboBox selesctYearCB;
+    private TextArea reportTA;
 
     @javafx.fxml.FXML
     public void initialize() {
-        selectYearCB.getItems().addAll("2023","2024","2025","2026");
-        selesctMonthCB.getItems().addAll("January","February","March","April","May","June","July","August","September","October","November","December");
-
+        selesctYearCB.getItems().addAll(2023,2024,2025,2026);
+        selesctMontCB.getItems().addAll("January","February","March","April","May","June","July","August","September","October","November","December");
     }
 
     @javafx.fxml.FXML
     public void enterButtonOA(ActionEvent actionEvent) {
+        reportTA.setText(null);
+        reportTA.setText(
+                "MONTHLY PERFORMANCE REPORT"
+                + "\n\n" + "Month: " + selesctMontCB.getValue()
+                + COO.generateMonthlyPerformanceReport(selesctMontCB.getValue(), selesctYearCB.getValue())
+        );
     }
 }

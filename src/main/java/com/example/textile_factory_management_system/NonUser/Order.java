@@ -6,13 +6,17 @@ import javafx.collections.ObservableList;
 import java.time.LocalDate;
 
 public class Order {
-    private int customerId, orderId, quantity;
-    private String productType,status;
-    private LocalDate scheduleDate;
-    private boolean largeOrder;
+    protected int customerId, orderId, quantity;
+    protected String productType,status;
+    protected LocalDate scheduleDate;
+    protected boolean largeOrder;
 
     public boolean isLargeOrder() {
         int LARGE_ORDER_THRESHOLD = 500;
+        if (this.quantity >= LARGE_ORDER_THRESHOLD) {
+            LargeOrder largeOrder1 = new LargeOrder(this.customerId, this.quantity, this.productType, this.status, this.scheduleDate);
+            FileReadWrite.append(largeOrder1, "LargeOrders.bin");
+        }
         return this.quantity >= LARGE_ORDER_THRESHOLD;
     }
 
@@ -53,5 +57,9 @@ public class Order {
 
     public LocalDate getScheduleDate() {
         return scheduleDate;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
