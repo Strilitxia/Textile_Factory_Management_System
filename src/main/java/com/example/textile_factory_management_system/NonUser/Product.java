@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private int productId;
     private String description, productType;
     private float price;

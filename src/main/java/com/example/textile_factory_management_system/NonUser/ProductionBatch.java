@@ -3,9 +3,10 @@ package com.example.textile_factory_management_system.NonUser;
 import com.example.textile_factory_management_system.utility.FileReadWrite;
 import javafx.collections.ObservableList;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ProductionBatch {
+public class ProductionBatch implements Serializable {
     private int batchId, quantity, orderId, targetId;
     private String productType;
     private String completeStatus;

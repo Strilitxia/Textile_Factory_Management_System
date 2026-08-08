@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class ProductReview {
+import java.io.Serializable;
+
+public class ProductReview implements Serializable {
     private int reviewId, customerId, ratingStars;
     private String comment, productType;
 

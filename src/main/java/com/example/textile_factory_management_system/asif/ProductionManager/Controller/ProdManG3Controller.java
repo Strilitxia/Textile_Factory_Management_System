@@ -38,14 +38,12 @@ public class ProdManG3Controller {
 
     @FXML
     public void initialize() {
-        // Set up cell value factories so columns render ProductionOutput fields properly
         batchId.setCellValueFactory(new PropertyValueFactory<>("batchId"));
         targetQuantityTC.setCellValueFactory(new PropertyValueFactory<>("targetQuantity"));
         totalProducedTC.setCellValueFactory(new PropertyValueFactory<>("totalProduced"));
         defectCountTC.setCellValueFactory(new PropertyValueFactory<>("defectCount"));
         usableCountTC.setCellValueFactory(new PropertyValueFactory<>("usableCount"));
 
-        // Populate combo box
         ObservableList<ProductionBatch> pdb = FileReadWrite.loadData(ProductionBatch.class, "ProductionBatches.bin");
         for (ProductionBatch p : pdb) {
             if ("Incomplete".equals(p.getCompleteStatus())) {
@@ -59,7 +57,6 @@ public class ProdManG3Controller {
         Integer selectedBatch = selectProductionBatchComboBox.getValue();
         if (selectedBatch == null) return;
 
-        // Search for existing output with matching batchId
         ObservableList<ProductionOutput> outputs = FileReadWrite.loadData(ProductionOutput.class, "ProductionOutputs.bin");
         ProductionOutput existingOutput = null;
 
@@ -70,7 +67,6 @@ public class ProdManG3Controller {
             }
         }
 
-        // Show existing record if found, otherwise create and append new record
         if (existingOutput != null) {
             productionBatchTV.getItems().setAll(existingOutput);
         } else {

@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class RFQ {
+import java.io.Serializable;
+
+public class RFQ implements Serializable {
     private int rfqId, customerId, productId;
     private float bulkQuantity;
 

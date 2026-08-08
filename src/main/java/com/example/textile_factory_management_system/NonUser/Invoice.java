@@ -1,6 +1,8 @@
 package com.example.textile_factory_management_system.NonUser;
 
-public class Invoice {
+import java.io.Serializable;
+
+public class Invoice implements Serializable {
     private int invoiceId,orderId;
     private float totalAmount;
 
