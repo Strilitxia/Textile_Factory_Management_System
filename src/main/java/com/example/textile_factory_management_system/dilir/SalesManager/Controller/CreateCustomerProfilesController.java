@@ -13,7 +13,7 @@ public class CreateCustomerProfilesController
     @javafx.fxml.FXML
     private TextField emailTF;
     @javafx.fxml.FXML
-    private Label addCustomerButtonOA;
+    private Label resultLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -6,10 +6,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="workerComboBox" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.PromotionEvaluationsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.PromotionEvaluationsController">
    <children>
       <Label layoutX="32.0" layoutY="24.0" text="Worker:" />
-      <ComboBox layoutX="83.0" layoutY="20.0" prefWidth="150.0" />
+      <ComboBox fx:id="workerComboBox" layoutX="83.0" layoutY="20.0" prefWidth="150.0" />
       <Label layoutX="32.0" layoutY="69.0" text="Remarks:" />
       <Label layoutX="322.0" layoutY="24.0" text="Score:" />
       <TextField fx:id="scoreTF" layoutX="367.0" layoutY="20.0" />

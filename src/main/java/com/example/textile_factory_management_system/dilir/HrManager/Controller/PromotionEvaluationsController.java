@@ -8,13 +8,13 @@ import javafx.scene.layout.AnchorPane;
 public class PromotionEvaluationsController
 {
     @javafx.fxml.FXML
-    private AnchorPane workerComboBox;
-    @javafx.fxml.FXML
     private TextField remarksTF;
     @javafx.fxml.FXML
     private TextField scoreTF;
     @javafx.fxml.FXML
     private Label resultLabel;
+    @javafx.fxml.FXML
+    private ComboBox workerComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
