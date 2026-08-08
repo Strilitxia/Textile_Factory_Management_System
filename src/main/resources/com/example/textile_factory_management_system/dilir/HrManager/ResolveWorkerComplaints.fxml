@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.ResolveWorkerComplaintsController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EBB591;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.dilir.HrManager.Controller.ResolveWorkerComplaintsController">
+   <children>
+      <Label layoutX="48.0" layoutY="262.0" text="Resolution Remarks:" />
+      <TableView layoutX="-1.0" layoutY="26.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn prefWidth="181.60003966093063" text="Worker" />
+          <TableColumn prefWidth="226.3999481201172" text="Description" />
+            <TableColumn prefWidth="191.199951171875" text="Status" />
+        </columns>
+      </TableView>
+      <TextField layoutX="165.0" layoutY="258.0" />
+      <Button layoutX="440.0" layoutY="258.0" mnemonicParsing="false" text="Mark as Resolved" />
+      <Label alignment="CENTER" disable="true" layoutX="259.0" layoutY="314.0" prefHeight="46.0" prefWidth="136.0" style="-fx-background-color: #f5d3bc;" text="Complaint Status" />
+   </children>
 </AnchorPane>
