@@ -1,4 +1,4 @@
-package com.example.textile_factory_management_system.asif.Buyer.Controller;
+package com.example.textile_factory_management_system.asif.ProductionManager.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,13 +8,13 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
-public class BuyerViewController {
+public class ProductionViewController {
     @javafx.fxml.FXML
     private Label welcomeLabel;
     @javafx.fxml.FXML
     private VBox contentContainer;
 
-    private static final String FXML_BASE_PATH = "/com/example/textile_factory_management_system/asif/Buyer/";
+    private static final String FXML_BASE_PATH = "/com/example/textile_factory_management_system/asif/ProductionManager/";
 
 
     private void loadFXMLView(String fxmlFilename) {
@@ -46,42 +46,42 @@ public class BuyerViewController {
 
 
     @javafx.fxml.FXML
-    public void submitBankTransactionButtonOA(ActionEvent actionEvent) {
-        loadFXMLView("G7submitBankTransactionID.fxml");
+    public void viewTargetButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G2ViewProductionTarget.fxml");
     }
 
     @javafx.fxml.FXML
-    public void requestForQuotationButtonOA(ActionEvent actionEvent) {
-        loadFXMLView("G2resquestForQuotation.fxml");
+    public void assignTaskToWorkerButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G4assignTaskToWorker.fxml");
     }
 
     @javafx.fxml.FXML
-    public void browseProductCatalogButtonOA(ActionEvent actionEvent) {
-        loadFXMLView("G1browseProductCatalog.fxml");
+    public void newProductionBatchButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G1createNewProductionBatchView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void submitReviewButtonOA(ActionEvent actionEvent) {
-        loadFXMLView("G8submitProductReview.fxml");
+    public void requestRawMaterialButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G8requestRawMaterialForUpcomingProduction.fxml");
     }
 
     @javafx.fxml.FXML
-    public void acceptOrRejectButtonOA(ActionEvent actionEvent) {
-        loadFXMLView("G3viewSentQuotations.fxml");
+    public void approveShiftChangeRequestButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G5approveShiftChangeRequest.fxml");
     }
 
     @javafx.fxml.FXML
-    public void downloadInvoiceButtonOA(ActionEvent actionEvent) {
-        loadFXMLView("G6downloadInvoice.fxml");
+    public void recordProductionOutputButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G6recordProductionOutput.fxml");
     }
 
     @javafx.fxml.FXML
-    public void viewOrderHistoryButtonOA(ActionEvent actionEvent) {
-        loadFXMLView("G5viewPastOrderHistory.fxml");
+    public void viewProductionProgressButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G3viewAndUpdateProductionProgress.fxml");
     }
 
     @javafx.fxml.FXML
-    public void trackOrderStatusOA(ActionEvent actionEvent) {
-        loadFXMLView("G4trackOrderStatus.fxml");
+    public void assignShiftToWorkerButtonOA(ActionEvent actionEvent) {
+        loadFXMLView("G7assignShiftSchedule.fxml");
     }
 }

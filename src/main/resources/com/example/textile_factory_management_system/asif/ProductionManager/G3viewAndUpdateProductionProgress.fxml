@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="449.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="449.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.ProductionManager.Controller.ProdManG3Controller">
    <children>
       <Label layoutX="45.0" layoutY="44.0" text="View And Update Production Progress:">
          <font>
