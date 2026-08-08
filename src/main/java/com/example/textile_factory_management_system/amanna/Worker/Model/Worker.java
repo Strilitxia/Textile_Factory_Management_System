@@ -1,13 +1,12 @@
 package com.example.textile_factory_management_system.amanna.Worker.Model;
 
-import com.example.textile_factory_management_system.NonUser.Attendance;
-import com.example.textile_factory_management_system.NonUser.LeaveRequest;
-import com.example.textile_factory_management_system.NonUser.ShiftChangeRequest;
+import com.example.textile_factory_management_system.NonUser.*;
 import com.example.textile_factory_management_system.User;
 import com.example.textile_factory_management_system.utility.FileReadWrite;
 import javafx.collections.ObservableList;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Worker extends User {
@@ -15,6 +14,9 @@ public class Worker extends User {
     private static final String LEAVE_REQUESTS_FILE = "LeaveRequests.bin";
     private static final String SHIFT_CHANGE_REQUESTS_FILE = "ShiftChangeRequests.bin";
     private static final String ATTENDANCE_FILE = "Attendance.bin";
+    private static final String COMPLAINTS_FILE = "Complaints.bin";
+    private static final String PAYROLL_FILE = "Payroll.bin";
+    private static final String PRODUCTION_TASKS_FILE = "ProductionTasks.bin";
 
     public Worker(int userId, String username, String password, String email, String role) {
         super(userId, username, password, email, role);
@@ -62,7 +64,53 @@ public class Worker extends User {
         }
         return attendanceArrayList;
     }
-   public static  String viewDailyTaskQuota(){
-
+   public static String viewDailyTaskQuota(){
+       return "";
    }
+
+   public static boolean clockIn(LocalTime attendanceTime) {
+       try {
+           Attendance attendance = new Attendance(LocalDate.now(), 1, "Worker Attendance", attendanceTime.toString(), "");
+           FileReadWrite.append(attendance, ATTENDANCE_FILE);
+           return true;
+       } catch (Exception e) {
+           return false;
+       }
+   }
+
+    public static boolean clockOut(LocalTime attendanceTime) {
+        try {
+            Attendance attendance = new Attendance(LocalDate.now(), 1, "Worker Attendance", "", attendanceTime.toString());
+            FileReadWrite.append(attendance, ATTENDANCE_FILE);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean submitComplaintToHR(String complaintStatement){
+        try {
+            ObservableList<Complaint> complaints = FileReadWrite.loadData(Complaint.class, COMPLAINTS_FILE);
+            Complaint complaint = new Complaint(complaints.size() + 1, 1, complaintStatement, "", "Unresolved");
+            complaints.add(complaint);
+            FileReadWrite.saveData(complaints, COMPLAINTS_FILE);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static Payroll loadCurrentMonthSalary(String month) {
+        ObservableList<Payroll> payrolls = FileReadWrite.loadData(Payroll.class, PAYROLL_FILE);
+        for (Payroll p:payrolls) {
+            if (p.getMonth().equals(month)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public static ObservableList<ProductionTask> loadAllProductionTasks() {
+        return FileReadWrite.loadData(ProductionTask.class, PRODUCTION_TASKS_FILE);
+    }
 }

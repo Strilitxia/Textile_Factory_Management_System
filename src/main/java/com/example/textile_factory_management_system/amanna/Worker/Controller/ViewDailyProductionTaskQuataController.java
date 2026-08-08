@@ -2,6 +2,7 @@ package com.example.textile_factory_management_system.amanna.Worker.Controller;
 
 import com.example.textile_factory_management_system.NonUser.ProductionTask;
 import com.example.textile_factory_management_system.User;
+import com.example.textile_factory_management_system.amanna.Worker.Model.Worker;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -29,7 +30,7 @@ public class ViewDailyProductionTaskQuataController
 
     @javafx.fxml.FXML
     public void loadButtonOA(ActionEvent actionEvent) {
-        tableViewTV.getItems().clear();
-
+        tableViewTV.setItems(null);
+        tableViewTV.setItems(Worker.loadAllProductionTasks());
     }
 }
