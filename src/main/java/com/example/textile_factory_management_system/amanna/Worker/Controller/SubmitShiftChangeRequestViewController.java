@@ -1,6 +1,7 @@
 package com.example.textile_factory_management_system.amanna.Worker.Controller;
 
 import com.example.textile_factory_management_system.NonUser.ShiftChangeRequest;
+import com.example.textile_factory_management_system.amanna.Worker.Model.Worker;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -8,35 +9,33 @@ import javafx.scene.text.Text;
 
 public class SubmitShiftChangeRequestViewController
 {
+
     @javafx.fxml.FXML
-    private Text submitShiftChangeRequestLabel;
+    private ComboBox<String> currentShiftCB;
     @javafx.fxml.FXML
-    private TableColumn<ShiftChangeRequest,String> newShiftTimeTC;
+    private Text success;
     @javafx.fxml.FXML
-    private TableColumn<ShiftChangeRequest,Integer> scheduledIdTC;
-    @javafx.fxml.FXML
-    private TableColumn<ShiftChangeRequest,String> oldShiftTimeTC;
-    @javafx.fxml.FXML
-    private TableView<ShiftChangeRequest> shiftChangeRequestTv;
-    @javafx.fxml.FXML
-    private TableColumn<ShiftChangeRequest,Integer> workerIdTC;
-    @javafx.fxml.FXML
-    private Label label;
+    private ComboBox<String> desiredShiftCB;
 
     @javafx.fxml.FXML
     public void initialize() {
-        newShiftTimeTC.setCellValueFactory(new PropertyValueFactory<ShiftChangeRequest,String>("newShiftTime"));
-        scheduledIdTC.setCellValueFactory(new PropertyValueFactory<ShiftChangeRequest,Integer>("scheduledId"));
-        oldShiftTimeTC.setCellValueFactory(new PropertyValueFactory<ShiftChangeRequest,String>("oldShiftTime"));
-        workerIdTC.setCellValueFactory(new PropertyValueFactory<ShiftChangeRequest,Integer>("workerId"));
-
-    }
-
-    @Deprecated
-    public void requestChangeButtonOA(ActionEvent actionEvent) {
+        currentShiftCB.getItems().addAll("Morning", "Evening");
+        desiredShiftCB.getItems().addAll("Morning", "Evening");
     }
 
     @javafx.fxml.FXML
-    public void changeRequestButtonOA(ActionEvent actionEvent) {
+    public void submitButtonOA(ActionEvent actionEvent) {
+        success.setText(null);
+        if (currentShiftCB.getValue().isBlank() || desiredShiftCB.getValue().isBlank()) {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Enter value of fields properly!");
+            a.showAndWait();
+        } else {
+            if (Worker.submitShiftChangeRequest(currentShiftCB.getValue(), desiredShiftCB.getValue())) {
+                success.setText("Request submitted successfully!");
+            } else {
+                success.setText("Request not submitted due to an error!");
+            }
+        }
     }
 }

@@ -10,17 +10,17 @@ public class ViewCurrentMonthsSalary
     @javafx.fxml.FXML
     private TableView<PAyroll> currentMonthSalaryTV;
     @javafx.fxml.FXML
-    private TableColumn baseRateTc;
+    private TableColumn<Payroll,Float> baseRateTc;
     @javafx.fxml.FXML
-    private TableColumn netPayTC;
+    private TableColumn<Payroll,Float> netPayTC;
     @javafx.fxml.FXML
     private TableColumn BonusAmountTC;
     @javafx.fxml.FXML
     private TextField payrollIdTf;
     @javafx.fxml.FXML
-    private ComboBox monthCB;
+    private ComboBox<Payroll> monthCB;
     @javafx.fxml.FXML
-    private TableColumn overtimeHoursTc;
+    private TableColumn<Payroll,Float> overtimeHoursTc;
     @javafx.fxml.FXML
     private Text viewCurrentMonthSalaryLabel;
     @javafx.fxml.FXML
@@ -28,9 +28,8 @@ public class ViewCurrentMonthsSalary
 
     @javafx.fxml.FXML
     public void initialize() {
+        monthCB.getItems().addAll("January","February","March","April","May","June","July","August","September","October","November","December");
     }
 
-    @Deprecated
-    public void myPaySlipbuttonOA(ActionEvent actionEvent) {
-    }
+
 }
