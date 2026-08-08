@@ -18,9 +18,11 @@
         </Text>
         <TableView fx:id="salesSummaryTV" layoutX="38.0" layoutY="195.0" prefHeight="200.0" prefWidth="523.0">
             <columns>
-                <TableColumn fx:id="productionOutputIdTc" prefWidth="188.800048828125" text="Production Output ID" />
-                <TableColumn fx:id="batchIdTc" prefWidth="139.199951171875" text="Batch ID" />
-                <TableColumn fx:id="totalProducedTC" prefWidth="189.60003662109375" text="Total Produced" />
+                <TableColumn fx:id="orderIDTC" prefWidth="82.39996337890625" text="Order ID" />
+                <TableColumn fx:id="customerIDTC" prefWidth="111.20001220703125" text="Customer ID" />
+                <TableColumn fx:id="productTypeTC" prefWidth="125.5999755859375" text="Product Type" />
+            <TableColumn fx:id="scheduleDateTC" prefWidth="102.4000244140625" text="Schedule Date" />
+            <TableColumn fx:id="statusTC" prefWidth="102.4000244140625" text="Status" />
             </columns>
         </TableView>
       <DatePicker fx:id="satartDateDP" layoutX="105.0" layoutY="98.0" />

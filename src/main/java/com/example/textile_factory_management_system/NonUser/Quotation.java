@@ -1,10 +1,13 @@
 package com.example.textile_factory_management_system.NonUser;
 
+import java.time.LocalDate;
+
 public class Quotation {
     private int quotationId,rfqId;
     private float proposedUnitPrice;
     private String productType;
     private String status;
+    private LocalDate submittedOn;
 
     public Quotation(int quotationId, int rfqId, float proposedUnitPrice, String productType) {
         this.quotationId = quotationId;
@@ -12,6 +15,7 @@ public class Quotation {
         this.proposedUnitPrice = proposedUnitPrice;
         this.productType = productType;
         this.status = "Pending";
+        this.submittedOn = LocalDate.now();
     }
 
     public int getQuotationId() {
@@ -36,5 +40,9 @@ public class Quotation {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public LocalDate getSubmittedOn() {
+        return submittedOn;
     }
 }
