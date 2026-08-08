@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="529.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="529.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.textile_factory_management_system.asif.ProductionManager.Controller.ProdManG1Controller">
    <children>
       <Label layoutX="64.0" layoutY="53.0" text="Create New Production Batch">
          <font>
@@ -19,10 +18,10 @@
       <Label layoutX="64.0" layoutY="168.0" text="Product Quantity:" />
       <Label layoutX="66.0" layoutY="203.0" text="Order ID:" />
       <Label layoutX="64.0" layoutY="239.0" text="Target ID:" />
-      <ComboBox layoutX="166.0" layoutY="128.0" prefWidth="150.0" />
-      <TextField layoutX="166.0" layoutY="164.0" />
-      <ComboBox layoutX="166.0" layoutY="207.0" prefWidth="150.0" />
-      <ComboBox layoutX="166.0" layoutY="243.0" prefWidth="150.0" />
-      <Button layoutX="103.0" layoutY="310.0" mnemonicParsing="false" text="Create Batch" />
+      <ComboBox fx:id="productTypeComboBox" layoutX="166.0" layoutY="128.0" prefWidth="150.0" />
+      <TextField fx:id="productQuantityTF" layoutX="166.0" layoutY="164.0" />
+      <ComboBox fx:id="orderIdComboBox" layoutX="166.0" layoutY="207.0" prefWidth="150.0" />
+      <ComboBox fx:id="TargetIdComboBox" layoutX="166.0" layoutY="243.0" prefWidth="150.0" />
+      <Button layoutX="103.0" layoutY="310.0" mnemonicParsing="false" onAction="#createBatchButtonOA" text="Create Batch" />
    </children>
 </AnchorPane>
